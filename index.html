@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 
 <head>
@@ -117,3 +118,124 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1><a href="html/homev2.html">CLICK ME</a></h1>
+    <div class="body" id="">
+        <div id="section1">
+            <h3><u>Refine Search</u></h3>
+                <div id="new-search">
+                    <div id="platform">
+                        <h4 id="platform-box-text" onclick="platformDropbox()">Platform</h4>
+                        <div id="platform-dropdown">
+                            <div class="platform-option" id="platform-youtube" onclick="">
+                                <div id="checkbox-youtube" class="checkbox" onclick="selectPlatform(this.id)"></div>Youtube
+                            </div>
+                            <div class="platform-option" id="platform-instagram" onclick="">
+                                <div id="checkbox-instagram" class="checkbox" onclick="selectPlatform(this.id)"></div>Instagram
+                            </div>
+                            <div class="platform-option" id="platform-facebook" onclick="">
+                                <div id="checkbox-facebook" class="checkbox" onclick="selectPlatform(this.id)"></div>Facebook
+                            </div>
+                            <div class="platform-option" id="platform-tiktok" onclick="">
+                                <div id="checkbox-tiktok" class="checkbox" onclick="selectPlatform(this.id)"></div>Tiktok
+                            </div>
+                            <div class="platform-option" id="platform-streaming" onclick="">
+                                <div id="checkbox-streaming" class="checkbox" onclick="selectPlatform(this.id)"></div>Streaming
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="Content">
+                        <h4 id="content-box-text" onclick="contentDropdown()">Content</h4>
+                        <div id="content-dropdown">
+                            <div class="content-option" id="content-sports" onclick=""><div id="checkbox-sports" class="checkbox" onclick="selectContent(this.id)"></div>Sports</div>
+                            <div class="content-option" id="content-lifestyle" onclick=""><div id="checkbox-lifestyle" class="checkbox" onclick="selectContent(this.id)"></div>Lifestyle</div>
+                            <div class="content-option" id="content-fitness" onclick=""><div id="checkbox-fitness" class="checkbox" onclick="selectContent(this.id)"></div>Fitness</div>
+                            <div class="content-option" id="content-cooking" onclick=""><div id="checkbox-cooking" class="checkbox" onclick="selectContent(this.id)"></div>Cooking</div>
+                        </div>
+                    </div>                    
+                    <div id="Type">
+                        <h4 id="type-box-text" onclick="typeDropbox()">Type</h4>
+                        <div id="type-dropdown">
+                            <div class="type-option" id="type-bowling" onclick=""><div id="checkbox-bowling" class="checkbox" onclick="selectType(this.id)"></div>bowling</div>
+                            <div class="type-option" id="type-baking" onclick=""><div id="checkbox-baking" class="checkbox" onclick="selectType(this.id)"></div>baking</div>
+                            <div class="type-option" id="type-gym" onclick=""><div id="checkbox-gym" class="checkbox" onclick="selectType(this.id)"></div>gym</div>
+                            <div class="type-option" id="type-surfing" onclick=""><div id="checkbox-surfing" class="checkbox" onclick="selectType(this.id)"></div>surfing</div>
+                        </div>
+                    </div>
+                    <div id="Followers">
+                        <h4 id="follower-box-text" onclick="followerDropbox()">Followers</h4>
+                        <div id="follower-dropdown">
+                            <div class="follower-option" id="follower-0k-10k" onclick=""><div id="checkbox-0k-10k" class="checkbox" onclick="selectFollower(this.id)"></div>0 - 10k</div>
+                            <div class="follower-option" id="follower-10k-100k" onclick=""><div id="checkbox-10k-100k" class="checkbox" onclick="selectFollower(this.id)"></div>10k - 100k</div>
+                            <div class="follower-option" id="follower-100k-250k" onclick=""><div id="checkbox-100k-250k" class="checkbox" onclick="selectFollower(this.id)"></div>100k - 250k</div>
+                            <div class="follower-option" id="follower-250k-500k" onclick=""><div id="checkbox-250k-500k" class="checkbox" onclick="selectFollower(this.id)"></div>250k - 500k</div>
+                            <div class="follower-option" id="follower-500k-1mil" onclick=""><div id="checkbox-500k-1mil" class="checkbox" onclick="selectFollower(this.id)"></div>500k - 1mil</div>
+                            <div class="follower-option" id="follower-1mil-10mil" onclick=""><div id="checkbox-1mil-10mil" class="checkbox" onclick="selectFollower(this.id)"></div>1mil - 0mil</div>
+                            <div class="follower-option" id="follower-10mil-25mil" onclick=""><div id="checkbox-10mil-25mil" class="checkbox" onclick="selectFollower(this.id)"></div>10mil - 25mil</div>
+                            <div class="follower-option" id="follower-25mil-50mil" onclick=""><div id="checkbox-25mil-50mil" class="checkbox" onclick="selectFollower(this.id)"></div>25mil - 50mil</div>
+                            <div class="follower-option" id="follower-50mil-100mil" onclick=""><div id="checkbox-50mil-100mil" class="checkbox" onclick="selectFollower(this.id)"></div>50mil - 100mil</div>
+                            <div class="follower-option" id="follower-100mil+" onclick=""><div id="checkbox-100mil+" class="checkbox" onclick="selectFollower(this.id)"></div>100mil+</div>
+                        </div>
+                    </div>
+                    <div id="gender">
+                        <h4 id="gender-box-text" onclick="genderDropbox()">Gender</h4>
+                        <div id="gender-dropdown">
+                            <div class="gender-option" id="gender-male" onclick=""><div id="checkbox-male" class="checkbox" onclick="selectGender(this.id)"></div>Male</div>
+                            <div class="gender-option" id="gender-female" onclick=""><div id="checkbox-female" class="checkbox" onclick="selectGender(this.id)"></div>Female</div>
+                            <div class="gender-option" id="gender-other" onclick=""><div id="checkbox-other" class="checkbox" onclick="selectGender(this.id)"></div>Other</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button id="filter-search" onclick="searchFilters()">Search!</button>
+        </div>
+        <div id="section2">
+            <!-- React auto fills this from "test.js" -->
+        </div>
+        <div id="section3">
+            <script>
+                accountName = "harry";
+                 function refresh(accountName){
+                    let section3 = document.getElementById("section3");
+                    section3.innerHTML += "my name is " + accountName + "<br>";
+                }
+                setTimeout(refresh(accountName), 0);
+            </script>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="links">
+            <div id="links1">
+                <a class="footerlink" href="">Contact Us</a> <br>
+                <a class="footerlink" href="">FAQ</a> <br>
+                <a class="footerlink" href="">About</a> <br>
+                <a class="footerlink" href="">dont click</a> <br>
+            </div>
+            <div id="link2">
+                
+            </div>
+        </div>
+        <div id="socials">
+            <a class="footerlink" href="">Instgram</a>
+            <a class="footerlink" href="">twitter</a>
+        </div>
+        <div id="company">
+            <a id="social" class="footerlink" href="">SocialQ</a>
+        </div>
+    </div>
+    <script src="../js/test.js"></script>
+    <script src="../js/header-footer.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+>>>>>>> 863dad84ee0b4a04f0d4cb0250a5b08be3922a44
