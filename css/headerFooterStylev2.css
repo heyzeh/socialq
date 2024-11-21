@@ -1,0 +1,146 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and borders are included in element's total width/height */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    flex: 1;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "socialQ . . loginSignup profileIconSmall";
+    height: 40px;
+    background-color: white;
+    width: 100%;
+    
+}
+
+#login-signup{
+    grid-area: loginSignup;
+    width: 40px;
+    height: 40px;
+    margin-left: 100%;
+    display: grid;
+    margin-right: 0px;
+}
+
+#profileIconSmall{
+    grid-area: profileIconSmall;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-left: auto;
+}
+
+#socialQ{
+    color: black;
+    grid-area: socialQ;
+    text-decoration: none;
+    float: left;
+    margin-top: 0px;
+    margin: 1px;
+    margin-left: 5px;
+    font-family: sans-serif;
+}
+#socialq{
+    font-size: 30px;
+}
+.menu{
+
+    color: white;
+    text-decoration: none;
+    border-radius: 2px;
+    margin: 2px;
+}
+.menu:hover{
+    color: pink;
+}
+.menu:active{
+   /* Remove default styles for active links */
+   color: inherit; /* Keeps the text color the same as the non-active state */
+   background-color: transparent; /* Ensures no background color change */
+   outline: none; /* Removes the focus outline */
+   box-shadow: none; /* Removes any box shadow applied */
+   text-decoration: none;
+}
+
+#menu_bar{
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(4, 80px);
+    gap: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+#searchInputs{
+    background-color: white;
+    margin: 1px;
+    border: solid black;
+    padding: 2px;
+}
+
+#test-links{
+    color: rgb(13, 58, 13);
+}
+
+#footer {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "links company"
+    "links socials";
+    padding: 7px;
+   
+    bottom: 0; /* Aligns the footer to the bottom */
+    left: 0;
+}
+
+
+.footerlink{
+    color: white;
+    text-decoration: none;
+}
+.footerlink:hover{
+    color: pink;
+}
+
+#links{
+    border-right: solid white;
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#links1{
+    border-right: solid white;
+    color: white;
+}
+
+#links2{
+    color: white;
+}
+
+#socials{
+
+    grid-area: socials;
+}
+
+#company{
+    grid-area: company;
+}

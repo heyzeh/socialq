@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="body">
+        <a href="signup.html">SIGN UP NOW!</a>
+        <form action="">
+            <div>
+                <label for="Username">Username</label>
+                <input type="text" id="login-username" name="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="login-password" name="password">
+            </div>
+            <button id="login-button" onclick="changeUsers(event)">Login</button> <br>
+            <p id="wrong_password"></p>
+        </form>
+    </div>
+    <div id="test-user">
+       <button onclick="refreshTest()">Update User Account Name</button>
+    </div>
+    <script src="../js/test.js"></script>
+    <script src="../js/header-footer.js"></script>
+
+    <script>
+        // Declare currentUser as a global variable
+        var currentUser = localStorage.getItem("username") || "";
+  
+            function changeUsers(event) {
+                if (currentUser === "") {
+                    event.preventDefault();
+                    var input = document.getElementById("login-username").value;
+                    localStorage.setItem("username", input);
+                    currentUser = input;
+                    console.log("Logged in as:", currentUser);
+
+                    if(document.getElementById("login-username").value === ""){
+                        document.getElementById("wrong_password").innerHTML = "Please enter username and Password";
+                    } else {
+                        document.getElementById("wrong_password").innerHTML = currentUser + " has logged in";
+                    }
+                    
+                } else {
+                    event.preventDefault();
+                    document.getElementById("wrong_password").innerHTML = currentUser + " is already logged in!";
+                }
+            }
+
+
+        function refreshTest() {
+            // Access the global currentUser variable
+            console.log("Current user:", currentUser);
+        }
+
+    </script>
+</body>
+</html>

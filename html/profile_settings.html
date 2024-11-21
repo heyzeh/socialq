@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <link rel="stylesheet" href="../css/profile-settings-css.css">
+    </head>
+    <body>
+        <div class="body" id="">
+            <div id="profile-body">
+                <div class="three-corner" id="profile-menu-options">
+                    <div class="profile-menu-class three-corner" id="profile-menu1" onclick="selectInfo()">Basic Info</div>
+                    <div class="profile-menu-class three-corner" id="profile-menu2" onclick="selectPreferences()">Preferences</div>
+                    <div class="profile-menu-class three-corner" id="profile-menu3" onclick="selectSettings()">Account Settings</div>
+                    <div class="profile-menu-class three-corner" id="profile-menu4" onclick="selectBilling()">Billing</div>
+                    <div class="profile-menu-class three-corner" id="profile-menu5" onclick="logout()">Logout</div>
+                    <script>
+                        var currentUser = localStorage.getItem("username") || "";
+                        
+                        function logout() {
+                            localStorage.removeItem("username");
+                            // Update the global currentUser variable to reflect the logout
+                            currentUser = "";
+                            // Optionally, you can redirect the user to a login page or a landing page
+                            console.log("User logged out. Current User:", currentUser);
+                            location.reload();
+                        }
+                        
+                    </script>
+                        </div>
+                            <div class="three-corner" id="profile-info">
+                                <p id="test-username">Username: </p> 
+                                <p>Password:</p>
+                                <p id="test-platform">Platform:</p>
+                                <script>
+                                    document.addEventListener("DOMContentLoaded", function() {
+                                    var currentUser = localStorage.getItem("username") || "";
+                                    document.getElementById("test-username").innerHTML = "Username: " + currentUser;
+
+                                    for (let i = 0; i < creators.length; i++) {
+                                    console.log("i");
+                                    if (currentUser === creators[i].username) {
+                                    console.log(creators[i].role);  // Log the platform of the matched creator
+                                    document.getElementById("test-platform").innerHTML = "Platform: " + creators[i].role;
+                                    }
+                                    }
+                                    });
+                                </script>
+                            </div>
+                            <div class="three-corner" id="profile-preferences">
+                                <p>this is your preferences</p>
+                            </div>
+                            <div class="three-corner" id="profile-settings">
+                                <p>this is your settings</p>
+                            </div>
+                            <div class="three-corner" id="profile-billing">
+                                <p>this is your billing</p>
+                            </div>
+            </div>
+        </div>
+        <script src="../js/test.js"></script>
+        <script src="../js/header-footer.js"></script>
+        <script src="../js/profile-settings.js"></script>
+    </body>
+</html>

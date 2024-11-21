@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Bowling Pros",
+    "type": "sports",
+    "followers": 100000,
+    "category": "bowling",
+    "role": "sponsor",
+    "link": "@BowlingPros(link)",
+    "platform": "platform-instagram",
+    "gender": "male"
+  },
+  {
+    "name": "FitHub",
+    "type": "fitness",
+    "followers": 300000,
+    "category": "equipment",
+    "role": "sponsor",
+    "link": "@FitHub(link)",
+    "platform": "platform-youtube",
+    "gender": "female"
+  },
+  {
+    "name": "BakeCentral",
+    "type": "lifestyle",
+    "followers": 50000,
+    "category": "baking",
+    "role": "influencer",
+    "link": "@BakeCentral(link)",
+    "platform": "platform-instagram",
+    "gender": "female"
+  },
+  {
+    "name": "GreenEat",
+    "type": "lifestyle",
+    "followers": 500000,
+    "category": "health food",
+    "role": "collaborator",
+    "link": "@GreenEat(link)",
+    "platform": "platform-tiktok",
+    "gender": "non-binary"
+  },
+  {
+    "name": "Adventure Gear Co",
+    "type": "outdoors",
+    "followers": 750000,
+    "category": "camping",
+    "role": "sponsor",
+    "link": "@AdventureGear(link)",
+    "platform": "platform-facebook",
+    "gender": "male"
+  },
+  {
+    "name": "SurfX",
+    "type": "sports",
+    "followers": 120000,
+    "category": "surfing",
+    "role": "sponsor",
+    "link": "@SurfX(link)",
+    "platform": "platform-twitter",
+    "gender": "female"
+  },
+  {
+    "name": "CycleLife",
+    "type": "fitness",
+    "followers": 1000000,
+    "category": "cycling",
+    "role": "sponsor",
+    "link": "@CycleLife(link)",
+    "platform": "platform-youtube",
+    "gender": "male"
+  },
+  {
+    "name": "ArtistryNow",
+    "type": "creative",
+    "followers": 200000,
+    "category": "arts & crafts",
+    "role": "influencer",
+    "link": "@ArtistryNow(link)",
+    "platform": "platform-instagram",
+    "gender": "female"
+  },
+  {
+    "name": "TechExplorers",
+    "type": "technology",
+    "followers": 2000000,
+    "category": "gadgets",
+    "role": "sponsor",
+    "link": "@TechExplorers(link)",
+    "platform": "platform-youtube",
+    "gender": "non-binary"
+  },
+  {
+    "name": "YogaFlow",
+    "type": "fitness",
+    "followers": 80000,
+    "category": "yoga",
+    "role": "influencer",
+    "link": "@YogaFlow(link)",
+    "platform": "platform-tiktok",
+    "gender": "female"
+  }
+]
