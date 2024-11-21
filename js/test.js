@@ -755,7 +755,7 @@ function generateCards() {
 
 //This asynce function saves the array from user.json to the const json.
 async function getCreatorsData(){
-    const userJSON = `http://127.0.0.1:5500/json/users.json`;
+    const userJSON = `https://heyzeh.github.io/socialq/json/users.json`;
     try { 
         const response = await fetch(userJSON);
         if(!response.ok){
@@ -773,7 +773,7 @@ async function getCreatorsData(){
 }
 
 async function getCompanyData(){
-    const companyJSON = `http://127.0.0.1:5500//json/companies.json`;
+    const companyJSON = `https://heyzeh.github.io/socialq/json/companies.json`;
     try { 
         const response = await fetch(companyJSON);
         if(!response.ok){
