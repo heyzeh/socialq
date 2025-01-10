@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Sophie Brown",
+    "link": "@EcoSophie",
+    "gender": "female",
+    "followers": "10k+",
+    "content": "fitness",
+    "type": "entertaining",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Jackson Miller",
+    "link": "@JaxTech",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "technology",
+    "type": "tutorial",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Emma Roberts",
+    "link": "@EmmaTheChef",
+    "gender": "female",
+    "followers": "50mil+",
+    "content": "cooking",
+    "type": "informative",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Aiden Taylor",
+    "link": "@AidenFitness",
+    "gender": "male",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Olivia Martin",
+    "link": "@OliviaAdventures",
+    "gender": "female",
+    "followers": "100k+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "Liam Johnson",
+    "link": "@LiamGamer",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Chloe Wilson",
+    "link": "@ChloeBeauty",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Ethan Harris",
+    "link": "@EthanSports",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "informative",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Isabella Clark",
+    "link": "@BellaTravel",
+    "gender": "female",
+    "followers": "25mil+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "Mason Scott",
+    "link": "@MasonTech",
+    "gender": "male",
+    "followers": "500k+",
+    "content": "technology",
+    "type": "review",
+    "platform": "platform-streaming"
+  },
+  {
+    "name": "Ava Lewis",
+    "link": "@AvaFitness",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "informative",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Oliver Walker",
+    "link": "@OliverInTheKitchen",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "cooking",
+    "type": "tutorial",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Charlotte Young",
+    "link": "@CharlotteFinance",
+    "gender": "female",
+    "followers": "100mil+",
+    "content": "finance",
+    "type": "informative",
+    "platform": "platform-linkedin"
+  },
+  {
+    "name": "James Adams",
+    "link": "@JamesGaming",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Mia Baker",
+    "link": "@MiaFashion",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "artistic",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Lucas Evans",
+    "link": "@LucasEducation",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "education",
+    "type": "informative",
+    "platform": "platform-linkedin"
+  },
+  {
+    "name": "Amelia Carter",
+    "link": "@AmeliaHealth",
+    "gender": "female",
+    "followers": "250k+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Daniel Roberts",
+    "link": "@DanielSports",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "Ella Mitchell",
+    "link": "@EllaLifestyle",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "lifestyle",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "William White",
+    "link": "@WillTech",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "technology",
+    "type": "informative",
+    "platform": "platform-streaming"
+  }
+]

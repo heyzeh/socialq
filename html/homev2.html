@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../css/home-css.css">
+</head>
+
+<body>
+    <div class="body" id="home-body">
+        <!-- Search Layer -->
+        <div class="layer" id="search-layer">
+            <h2>Search</h2>
+            <div id="searchInputs">
+                <input class="search_inputs" id="search_words" type="text" placeholder="Search...">
+                <select class="search_inputs" id="select_field">
+                    <option value="opt0" disabled selected>Select Your Field</option>
+                    <option value="opt1">Sports</option>
+                </select>
+                <select class="search_inputs" id="select_location">
+                    <option value="opt0" disabled selected>Select a Location</option>
+                    <option value="opt1">Australia</option>
+                </select>
+                <a id="search_button" href="search.html">
+                    <button onclick="runSearch()">Search!</button>
+                </a>
+            </div>
+        </div>
+
+        <!-- About Layer -->
+        <div class="layer" id="about-layer">
+            <h2>About</h2>
+            <p>Welcome to our platform. Here, you can connect with others, explore new opportunities, and discover amazing content.</p>
+        </div>
+
+        <!-- Social Media Links Layer -->
+        <div class="layer" id="social-media-layer">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+            </ul>
+        </div>
+
+        <!-- Photos Layer -->
+        <div class="layer" id="photos-layer">
+            <h2>Gallery</h2>
+            <div class="photo-gallery">
+                <img src="../images/photo1.jpg" alt="Photo 1">
+                <img src="../images/photo2.jpg" alt="Photo 2">
+                <img src="../images/photo3.jpg" alt="Photo 3">
+            </div>
+        </div>
+
+        <!-- Profile Info Layer -->
+        <div class="layer" id="profile-info-layer">
+            <h2>Your Profile</h2>
+            <p>Name: John Doe</p>
+            <p>Email: johndoe@example.com</p>
+            <p>Location: Australia</p>
+        </div>
+    </div>
+    <script src="../js/header-footer.js"></script>
+</body>
+
+</html>

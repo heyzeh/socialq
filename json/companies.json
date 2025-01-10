@@ -1,0 +1,209 @@
+[
+  {
+    "name": "EcoFit Solutions",
+    "link": "@EcoFitSolutions",
+    "gender": "female",
+    "followers": "10k+",
+    "content": "fitness",
+    "type": "entertaining",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "TechTutorials Hub",
+    "link": "@TechTutorialsHub",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "tech",
+    "type": "tutorial",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Culinary Creations",
+    "link": "@CulinaryCreations",
+    "gender": "female",
+    "followers": "50mil+",
+    "content": "cooking",
+    "type": "informative",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "FitLife Academy",
+    "link": "@FitLifeAcademy",
+    "gender": "male",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Globetrotter Adventures",
+    "link": "@GlobetrotterAdventures",
+    "gender": "female",
+    "followers": "100k+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "GameGears Reviews",
+    "link": "@GameGearsReviews",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Beauty Glow Studios",
+    "link": "@BeautyGlowStudios",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Sports Central Network",
+    "link": "@SportsCentralNetwork",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "informative",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Wanderlust Journeys",
+    "link": "@WanderlustJourneys",
+    "gender": "female",
+    "followers": "25mil+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "TechSphere Reviews",
+    "link": "@TechSphereReviews",
+    "gender": "male",
+    "followers": "500k+",
+    "content": "technology",
+    "type": "review",
+    "platform": "platform-streaming"
+  },
+  {
+    "name": "FitFusion Hub",
+    "link": "@FitFusionHub",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "informative",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "Chef’s Table Kitchen",
+    "link": "@ChefsTableKitchen",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "cooking",
+    "type": "tutorial",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "Financial Growth Network",
+    "link": "@FinancialGrowthNetwork",
+    "gender": "female",
+    "followers": "100mil+",
+    "content": "finance",
+    "type": "informative",
+    "platform": "platform-linkedin"
+  },
+  {
+    "name": "GameTech Solutions",
+    "link": "@GameTechSolutions",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "GlowBeauty Creations",
+    "link": "@GlowBeautyCreations",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "artistic",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "BrightFuture Education",
+    "link": "@BrightFutureEducation",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "education",
+    "type": "informative",
+    "platform": "platform-linkedin"
+  },
+  {
+    "name": "FitMind Wellness",
+    "link": "@FitMindWellness",
+    "gender": "female",
+    "followers": "250k+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-facebook"
+  },
+  {
+    "name": "ActiveSports Network",
+    "link": "@ActiveSportsNetwork",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
+  },
+  {
+    "name": "Lifestyle Chic",
+    "link": "@LifestyleChic",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "lifestyle",
+    "type": "tutorial",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "TechWorld Innovations",
+    "link": "@TechWorldInnovations",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "technology",
+    "type": "informative",
+    "platform": "platform-streaming"
+  },
+  {
+    "name": "SportsClash Zone",
+    "link": "@SportsClashZone",
+    "gender": "male",
+    "followers": "500k+",
+    "content": "sports",
+    "type": "tutorial",
+    "platform": "platform-youtube"
+  },
+  {
+    "name": "HealthyBite Kitchen",
+    "link": "@HealthyBiteKitchen",
+    "gender": "female",
+    "followers": "25mil+",
+    "content": "cooking",
+    "type": "review",
+    "platform": "platform-pinterest"
+  },
+  {
+    "name": "DigitalArts Studios",
+    "link": "@DigitalArtsStudios",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "artistic",
+    "type": "creative",
+    "platform": "platform-snapchat"
+  }
+]

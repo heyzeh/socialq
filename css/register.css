@@ -1,0 +1,211 @@
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+body .body {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  
+}
+
+/* Header */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Form styles for the first part */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form input fields */
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+/* Submit Button */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Next Step Button */
+#next-step {
+  background-color: #ff9800;
+}
+
+#next-step:hover {
+  background-color: #fb8c00;
+}
+
+#enter-email {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Checkbox platform styling */
+#platform, #content, #type, #followers, #gender {
+  margin-top: 30px;
+}
+
+.register-box {
+  border: none;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.signup-option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.signup-option:hover {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.signup {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.signup:hover {
+  border-color: #2196f3;
+  background-color: #2196f3;
+}
+
+/* Selected state */
+.signup.selected {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+#register-box-text {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .body {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  form {
+      gap: 15px;
+  }
+
+  input {
+      font-size: 0.9rem;
+  }
+
+  button {
+      padding: 12px;
+      font-size: 1rem;
+  }
+
+  .signup {
+      width: 12px;
+      height: 12px;
+  }
+}
+
+/* Ensure the first form is visible initially */
+#profile-fields1 {
+  display: block;
+}
+
+#profile-fields1-1{
+  display: none;
+
+}
+
+/* Hide the second form initially */
+#profile-fields2 {
+  display: none;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#signup-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  
+}
+
+
+#creator-signup, #company-signup {
+  border: #ff9800 solid;
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#creator-signup:hover, #company-signup:hover {
+  background-color: #ff9800;
+}
