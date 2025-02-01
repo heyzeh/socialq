@@ -203,9 +203,7 @@
 
     <script type="module">
         const nextStepButtonCreator = document.getElementById("next-step-creator");
-        const nextStepButtonCompany = document.getElementById("next-step-company");
         const creatorSignup = document.getElementById("creator-signup");
-        const companySignup = document.getElementById("company-signup");
         const companyPage1 = document.getElementById("profile-fields1-1");
         const creatorPage1 = document.getElementById("profile-fields1");
         let accountType = "creator";
@@ -214,19 +212,19 @@
             accountType = "creator";
             console.log(accountType);
             creatorSignup.style.backgroundColor = "orange";
-            companySignup.style.backgroundColor = "";
+            // companySignup.style.backgroundColor = "";
             companyPage1.style.display = "none";
             creatorPage1.style.display ="block";
         })
 
-        companySignup.addEventListener("click", function(){
-            accountType = "company";
-            console.log(accountType);
-            creatorSignup.style.backgroundColor = "";
-            companySignup.style.backgroundColor = "orange";
-            companyPage1.style.display = "block";
-            creatorPage1.style.display = "none";
-        })
+        // companySignup.addEventListener("click", function(){
+        //     accountType = "company";
+        //     console.log(accountType);
+        //     creatorSignup.style.backgroundColor = "";
+        //     companySignup.style.backgroundColor = "orange";
+        //     companyPage1.style.display = "block";
+        //     creatorPage1.style.display = "none";
+        // })
 
         
     nextStepButtonCreator.addEventListener("click", (event) => {
