@@ -83,7 +83,7 @@ async function loginUser(email, password) {
     console.log("Logged in user email:", user.email);
 
     // Navigate to a different page
-    window.location.href = '../html/profilev2.html'; // Change to your desired page
+    window.location.href = `../html/profilev2.html?userId=${user.uid}`; // Change to your desired page
 
     return user.email; // Return email or use it as needed
   } catch (error) {
