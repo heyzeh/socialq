@@ -91,7 +91,7 @@ submit.addEventListener('click', function (event) {
             localStorage.setItem('firstName', firstName);
             localStorage.setItem('uid', user.uid);
             console.log(profileDescription);
-            window.location.href = "profilev2.html";
+            window.location.href = `../html/homev2.html`;
           })
           .catch((error) => {
             console.error("Error writing document: ", error);
@@ -123,7 +123,7 @@ submit.addEventListener('click', function (event) {
             console.log("Company document successfully written!");
             localStorage.setItem('firstName', companyName);
             localStorage.setItem('uid', company.uid);
-            window.location.href = "profilev2.html";
+            window.location.href = `../html/profilev2.html?userId=${user.uid}`;
           })
           .catch((error) => {
             console.error("Error writing document: ", error);
