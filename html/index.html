@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,3 +56,62 @@
     <script type="module" src="../js/login.js" defer></script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Q - Welcome</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <h1 class="logo">Social Q</h1>
+            <p class="tagline">Your gateway to meaningful connections online.</p>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h2>Log in to Social Q</h2>
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button id="login-button">Log In</button>
+            </form>
+            <p class="signup-text">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+    <script type="module">
+        import { loginUser,whoIsLoggedIn, logoutUser } from "../js/login.js";
+        
+        const login = document.getElementById("login-button");
+        const logintest = document.getElementById("user-test");
+        const logout = document.getElementById("logout-button");
+
+        login.addEventListener("click", (event) => {
+            console.log("loging button has been pressed");
+            event.preventDefault();
+            // Declare and assign values to email and password
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
+
+            // Log the values
+            console.log("Email:", email, "Password: ####");
+
+            // Add additional logic for login here
+            loginUser(email,password);
+        });
+    </script>
+    <script type="module" src="../js/login.js" defer></script>
+</body>
+</html>
+>>>>>>> 87b3c477c84110625b224d723a37036d05680aec

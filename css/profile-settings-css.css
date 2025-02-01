@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #profile-menu1{
     margin-top: 61px;
 }
@@ -110,3 +111,102 @@
 .auth{
     display: block;
 }
+=======
+#profile-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 90%;
+    margin: 20px auto;
+    height: auto;
+    gap: 10px;
+}
+
+.profile-menu-class {
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile-menu-class:hover {
+    background-color: pink;
+    color: white;
+}
+
+#profile-info,
+#profile-preferences,
+#profile-settings,
+#profile-billing,
+#profile-notifications,
+#profile-privacy,
+#profile-security,
+#profile-connected {
+    border: 2px solid black;
+    padding: 15px;
+    margin: 5px;
+    display: none;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#profile-info {
+    display: grid; /* Default visible section */
+}
+
+#profile-description {
+    margin: 10px 0;
+    width: 95%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    resize: none;
+}
+
+#profile-info p,
+#profile-preferences p,
+#profile-settings p,
+#profile-billing p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#profile-info h2,
+#profile-preferences h2,
+#profile-settings h2,
+#profile-billing h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+#logout {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #f44336;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logout:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+#logout:active {
+    background-color: #d32f2f;
+    transform: scale(0.98);
+}
+>>>>>>> 87b3c477c84110625b224d723a37036d05680aec
