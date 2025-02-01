@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,61 +54,3 @@
     <script type="module" src="../js/login.js" defer></script>
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    <div class="body">
-        <a href="signup.html">SIGN UP NOW!</a>
-        <form action="">
-            <div>
-                <label for="email">Email</label>
-                <input type="text" id="login-email" name="email">
-            </div>
-            <div>
-                <label for="password">Password</label>
-                <input type="password" id="login-password" name="password">
-            </div>
-            <!-- Change the button type to "button" to prevent form submission -->
-            <button type="button" id="login-button">Login</button> <br>
-            <!-- <button type="button" id="user-test">who is logged in</button> <br> -->
-            <!-- <button type="button" id="logout-button">Logout</button> -->
-        </form>
-    </div>
-    <script type="module">
-        import { loginUser,whoIsLoggedIn, logoutUser } from "../js/login.js";
-        
-        const login = document.getElementById("login-button");
-        const logintest = document.getElementById("user-test");
-        const logout = document.getElementById("logout-button");
-
-        login.addEventListener("click", (event) => {
-            console.log("loging button has been pressed");
-            
-            // Declare and assign values to email and password
-            const email = document.getElementById("login-email").value;
-            const password = document.getElementById("login-password").value;
-
-            // Log the values
-            console.log("Email:", email, "Password: ####");
-
-            // Add additional logic for login here
-            loginUser(email,password);
-        });
-
-        logintest.addEventListener("click", (event) => {
-            whoIsLoggedIn();
-        })
-
-        logout.addEventListener("click", (event) => {
-            logoutUser();
-        })
-    </script>
-
-    <script type="module" src="../js/header-footer.js"></script>
-    <script type="module" src="../js/login.js" defer></script>
-</body>
-</html>
->>>>>>> 87b3c477c84110625b224d723a37036d05680aec
