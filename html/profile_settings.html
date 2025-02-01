@@ -1,3 +1,143 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/profile-settings-css.css">
+    <!-- Firebase App SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+
+<!-- Firebase Authentication SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+
+<!-- If you're using Firestore or other services, include them as needed -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+
+</head>
+<body>
+    <div class="body" id="">
+        <div id="profile-body">
+            <div class="three-corner" id="profile-menu-options">
+                <div class="profile-menu-class " id="profile-menu1">Basic Info</div>
+                <div class="profile-menu-class " id="profile-menu2">Preferences</div>
+                <div class="profile-menu-class " id="profile-menu3">Account Settings</div>
+                <div class="profile-menu-class " id="profile-menu4">Billing</div>
+                <div class="profile-menu-class " id="profile-menu5">Notifications</div>
+                <div class="profile-menu-class " id="profile-menu6">Privacy</div>
+                <div class="profile-menu-class " id="profile-menu7">Security</div>
+                <div class="profile-menu-class " id="profile-menu8">Connected Accounts</div>
+                <div class="profile-menu-class " id="logout">Logout</div>
+            </div>
+
+            <!-- Basic Info Section -->
+            <div class="three-corner settings-display" id="profile-info">
+                <h2>Basic Information</h2>
+                <p><strong>First Name:</strong> <span id="firstName"></span></p>
+                <p><strong>Last Name:</strong> <span id="lastName"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong id="setting-about">About me:</strong> <textarea class="auth" id="profile-description-auth" placeholder="Write about yourself..." rows="5" cols="30"></textarea><p id="profile-description-unauth" class="unAuth"></p></p>
+                <p><strong id="setting-availability">Availability:</strong> <textarea class="auth" id="profile-availability-auth" placeholder="Write about your availability..." rows="5" cols="30"></textarea><p id="profile-availability-unauth" class="unAuth"></p></p>
+                <button class="auth" type="button" id="basic-info-submit">Save new settings</button>
+            </div>
+
+            <!-- Preferences Section -->
+            <div class="three-corner settings-display" id="profile-preferences">
+                <h2>Preferences</h2>
+                <p class="unAuth"><strong>Account Statis:</strong> <span id="unAuth-Statis"></span></p>
+                <p class="auth"><strong>Account Statis:</strong> <select id="auth-statis"><option id="statis-option1" value="Live">Live</option><option id="statis-option2" value="offline">Offline</option></select></p>
+                <p><strong>Language:</strong> <select id="language"><option value="en">English</option><option value="es">Spanish</option></select></p>
+                <p><strong>Theme:</strong> <select id="theme"><option value="light">Light</option><option value="dark">Dark</option></select></p>
+            </div>
+
+            <!-- Account Settings Section -->
+            <div class="three-corner settings-display" id="profile-settings">
+                <h2>Account Settings</h2>
+                <p><strong>Platform:</strong> <span id="platform"></span></p>
+                <p><strong>Content:</strong> <span id="content"></span></p>
+                <p><strong>Type:</strong> <span id="type"></span></p>
+                <p><strong>Followers:</strong> <span id="followers"></span></p>
+                <p><strong>Gender:</strong> <span id="gender"></span></p>
+                <div  class="auth" id="imageUploader-auth">
+                    <h1>Upload Image</h1>
+                    <input type="file" id="fileInput-auth" accept="image/*">
+                    <button id="uploadImage-auth">Upload Image</button>
+                    <img id="imagePreview-auth" src="" alt="Image Preview">
+                </div>
+            </div>
+
+            <!-- Billing Section -->
+            <div class="three-corner settings-display" id="profile-billing">
+                <h2>Billing</h2>
+                <p><strong>Billing Information:</strong> Not available yet</p>
+            </div>
+
+            <!-- Notifications Section -->
+            <div class="three-corner settings-display" id="profile-notifications">
+                <h2>Notifications</h2>
+                <p><strong>Email Notifications:</strong> <input type="checkbox" id="email-notifications"></p>
+                <p><strong>Push Notifications:</strong> <input type="checkbox" id="push-notifications"></p>
+            </div>
+
+            <!-- Privacy Section -->
+            <div class="three-corner settings-display" id="profile-privacy">
+                <h2>Privacy</h2>
+                <p><strong>Profile Visibility:</strong> <select id="visibility"><option value="public">Public</option><option value="private">Private</option></select></p>
+            </div>
+
+            <!-- Security Section -->
+            <div class="three-corner settings-display" id="profile-security">
+                <h2>Security</h2>
+                <p><strong>Password:</strong> <button id="change-password">Change Password</button></p>
+                <p><strong>Two-Factor Authentication:</strong> <input type="checkbox" id="two-factor"></p>
+            </div>
+
+            <!-- Connected Accounts Section -->
+            <div class="three-corner" id="profile-connected">
+                <h2>Connected Accounts</h2>
+                <p><strong>Google Account:</strong> <button id="connect-google">Connect</button></p>
+                <p><strong>Facebook Account:</strong> <button id="connect-facebook">Connect</button></p>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        // Update JavaScript logic for new sections
+        import { logoutUser } from "../js/profile-settings.js";
+
+        const sections = [
+            "info",
+            "preferences",
+            "settings",
+            "billing",
+            "notifications",
+            "privacy",
+            "security",
+            "connected"
+        ];
+
+        sections.forEach((section) => {
+            document.getElementById(`profile-menu${sections.indexOf(section) + 1}`).addEventListener("click", () => {
+                sections.forEach((s) => {
+                    document.getElementById(`profile-${s}`).style.display = section === s ? "grid" : "none";
+                });
+            });
+        });
+
+        const logout = document.getElementById("logout");
+        logout.addEventListener("click", () => {
+            if (logout.style.backgroundColor === "pink") {
+                sessionStorage.setItem('redirected', 'false');
+                logoutUser();
+            } else {
+                logout.style.backgroundColor = "pink";
+                logout.innerHTML = "Click again to Logout";
+            }
+        });
+    </script>
+    <script type="module" src="../js/header-footer.js"></script>
+    <script type="module" src="../js/profile-settings.js"></script>
+    
+</body>
+</html>
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -116,3 +256,4 @@
     <script type="module" src="../js/profile-settings.js" defer></script>
 </body>
 </html>
+>>>>>>> 87b3c477c84110625b224d723a37036d05680aec

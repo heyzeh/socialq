@@ -1,3 +1,251 @@
+<<<<<<< HEAD
+
+body{
+    background-color: white;
+}
+
+.three-corner{
+    border-radius: 10px 10px 10px 0;
+}
+.titlecard {
+    border: solid black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    width: 75%;
+    height: min-content;
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+        "name name name type"
+        "topLeft topLeft topRight topRight"
+        "bottomLeft bottomLeft bottomRight bottomRight";
+    justify-content: space-between;
+} 
+
+.titlecard:hover{
+    border: 4px solid pink;
+}
+.cardSection{
+    border: solid black;
+    background-color: white;
+    border-radius: 10px 10px 10px 0;
+    box-sizing: border-box; 
+    margin: 3px;
+    width: fit-content;
+    padding: 10px;
+}
+
+#name {
+    grid-area: name;
+    padding: 10px;
+    width: 100%;
+}
+
+#type {
+    grid-area: type;
+    width: 100%;
+}
+
+#topLeft {
+    grid-area: topLeft;
+}
+
+#topRight {
+    grid-area: topRight;
+}
+
+#bottomLeft {
+    grid-area: bottomLeft;
+}
+
+#bottomRight {
+    grid-area: bottomRight;
+}
+
+#body{
+    display: flex;
+    flex: 1; 
+    padding: 2px;
+    gap: 3px;
+    background-color:  white;
+}
+
+#search-tabs{
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 9px 9px 0 0;
+    margin: -4px;
+}
+
+#creator-search-tab{
+    padding: 3px;
+    border-right: 5px solid black;
+    border-top-right-radius: 9px;
+}
+
+#company-search-tab{
+    padding: 3px;
+    border-bottom: 5px solid black;
+}
+
+#section1 {
+    border: solid blaCK;
+    background-color: white;
+    width: fit-content;
+    flex: 1;
+    border-radius: 10px;
+    padding: 2px;
+    margin-top: 10px;
+    height: fit-content;
+    margin-left: 10px;
+    z-index: 0;
+}
+
+#section2{
+    display: flex;
+    flex: 4;
+   
+    background-color:  white;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+#section3 {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+
+    border-radius: 8px;
+    padding: 15px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+/* Tabs */
+#search-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    background: #007bff;
+}
+
+#search-tabs div {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#search-tabs div:hover {
+    background: #007bff;
+}
+
+/* Dropdowns */
+h4 {
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+h4:hover {
+    background: #e9ecef;
+    color: #007bff;
+}
+
+#platform-dropdown,
+#content-dropdown,
+#type-dropdown,
+#follower-dropdown,
+#engagement-dropdown,
+#gender-dropdown,
+#location-dropdown {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 10px;
+    animation: fadeIn 0.3s ease;
+}
+
+.platform-option,
+.content-option,
+.type-option,
+.follower-option,
+.engagement-option,
+.gender-option,
+.location-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.platform-option:last-child,
+.content-option:last-child,
+.type-option:last-child,
+.follower-option:last-child,
+.engagement-option:last-child,
+.gender-option:last-child,
+.location-option:last-child {
+    border-bottom: none;
+}
+
+.platform-option:hover,
+.content-option:hover,
+.type-option:hover,
+.follower-option:hover,
+.engagement-option:hover,
+.gender-option:hover,
+.location-option:hover {
+    background: #f8f9fa;
+    color: #0056b3;
+}
+
+.checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.checkbox:hover {
+    background: #e9ecef;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+=======
 
 body{
     background-color: white;
@@ -242,3 +490,4 @@ h4:hover {
         opacity: 1;
     }
 }
+>>>>>>> 87b3c477c84110625b224d723a37036d05680aec

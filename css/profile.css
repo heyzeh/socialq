@@ -1,3 +1,419 @@
+<<<<<<< HEAD
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header, footer {
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.settings-link {
+    color: #ff9800;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.settings-link:hover {
+    color: #ff9800;
+}
+
+/* Profile Layout */
+#profile {
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "profileimg profilename profiletype"
+        "profilebody";
+    grid-gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#profile-header{
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    display: flex;
+}
+
+#profile-image {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    position: relative;
+}
+
+.profile-picture {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+}
+#profile-picture-edit:hover{
+    z-index: 2;
+    position: absolute;
+    border: 2px solid pink;
+    color: rgb(255, 192, 203);
+    background-color: rgba(0, 0, 0, 0.4) ;
+    
+}
+#profile-picture-edit{
+    z-index: 3;
+    position: absolute;
+    text-align: center;  
+}
+#profile-picture-edit-text{
+    margin-top: 54px;
+    display: none;
+    text-shadow:
+    1px 1px 0px black,   /* Shadow to the right and bottom */
+    -1px -1px 0px black, /* Shadow to the left and top */
+    1px -1px 0px black,  /* Shadow to the right and top */
+    -1px 1px 0px black;  /* Shadow to the left and bottom */
+}
+
+#profile-picture-input{
+    display: none;
+}
+#profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+#profile-full-name {
+    font-size: 24px;
+    margin: 0;
+}
+
+#profile-type-platform {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+#profile-type, #profile-platform {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Profile Body Section */
+#profile-body {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+#profile-left {
+    flex: 1;
+}
+
+#profile-right {
+    flex: 4;
+}
+
+/* Profile Block Styling */
+.profile-block {
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+}
+
+.profile-left {
+    position: relative;
+    border-right: 1px solid #ccc;
+}
+
+.profile-left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 80%;
+    border-top: 1px solid #ccc;
+    z-index: 1;
+}
+
+.profile-left:first-child::before {
+    border-top: none; /* Removes the border-top from the pseudo-element on the first .profile-left */
+}
+
+.profile-left {
+    border-right: 1px solid #ccc;
+}
+
+.profile-right{
+    display: block;
+    border-top: 1px solid #ccc;
+}
+
+.profile-block:first-child{
+    border-top: none; /* Remove border on the first element */
+}
+
+/* Section Headings */
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #profile-body {
+        flex-direction: column;
+    }
+    #gallery1{
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    #profile-full-name {
+        font-size: 22px;
+    }
+
+    #profile-type, #profile-platform {
+        font-size: 16px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .profile-block {
+        padding: 8px 0;
+    }
+}
+
+/* Banner Section */
+#banner-container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.banner {
+    /* border: solid 2px black; */
+    width: 100%;
+    height: 300px; /* Set a max height for the banner */
+    background-size: cover; /* Ensures the image scales to cover the container */
+    background-position: center; /* Center the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#banner-edit {
+    z-index: 3;
+    position: absolute;
+    text-align: center;  
+}
+
+#banner-edit:hover{
+    z-index: 2;
+    position: absolute;
+    border: 2px solid pink;
+    color: rgb(255, 192, 203);
+    background-color: rgba(0, 0, 0, 0.4) ;
+    
+}
+#banner-edit-text{
+    margin-top: 145px;
+    display: none;
+    text-shadow:
+    1px 1px 0px black,   
+    -1px -1px 0px black, 
+    1px -1px 0px black, 
+    -1px 1px 0px black;  
+}
+
+#banner-input{
+    display: none;
+}
+
+.unAuth{
+    display: block;
+}
+
+.auth{
+    display: none;
+}
+
+/* gallery css */
+
+
+#gallery-edit{
+    display: flex;
+    align-items: end;
+}
+
+#gallery-change{
+    margin-bottom: 13px;
+    margin-left: 10px;
+}
+
+#gallery-change-img{
+    width: 12px;
+    height: 12px;
+}
+
+#gallery-select{
+    border: 2px solid black;
+}
+
+#gallery1-select{
+    border: 2px solid black;
+}
+
+#gallery2{
+    display: none;
+    border: 2px solid black;
+    width: 100%;
+    gap: 4px;
+}
+
+.gallery2-imgs{
+    width: 98.8%;
+    aspect-ratio: 16 / 9;
+    border: 2px solid black;
+    margin: 4px;
+}
+
+#gallery2-select{
+    border: 2px solid black;
+}
+
+#gallery1 {
+    display: grid;
+    border: 2px solid black;
+    width: 100%;
+    grid-template-areas: "gallery1Img1 gallery1Img2 gallery1Img3";
+    gap: 4px;
+}
+
+.gallery1-imgs {
+    width: 100%;
+    height: 300px; /* Same height for both images */
+    object-fit: cover; /* Ensures image scales correctly */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: block; /* Ensures the images are block-level elements */
+    margin: 4px;
+}
+
+#gallery1-img1 {
+    grid-area: gallery1Img1;
+}
+
+#gallery1-img2 {
+    grid-area: gallery1Img2;
+}
+
+#gallery1-img3 {
+    grid-area: gallery1Img3;
+}
+
+#gallery1-img1,
+#gallery1-img2,
+#gallery1-img3 {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#gallery1-img1-edit {
+    z-index: 3;
+    position: absolute;
+    text-align: center;  
+}
+
+#gallery1-img1-edit:hover {
+    z-index: 2;
+    position: absolute;
+    border: 2px solid pink;
+    color: rgb(255, 192, 203);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#gallery1-img2-edit {
+    z-index: 3;
+    position: absolute;
+    text-align: center;  
+}
+
+#gallery1-img2-edit:hover {
+    z-index: 2;
+    position: absolute;
+    border: 2px solid pink;
+    color: rgb(255, 192, 203);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#gallery1-img3-edit {
+    z-index: 3;
+    position: absolute;
+    text-align: center;  
+}
+
+#gallery1-img3-edit:hover {
+    z-index: 2;
+    position: absolute;
+    border: 2px solid pink;
+    color: rgb(255, 192, 203);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#gallery1-img1-edit-text,
+#gallery1-img2-edit-text,
+#gallery1-img3-edit-text {
+    margin-top: 145px;
+    display: none;
+    text-shadow: 1px 1px 0px black,   
+    -1px -1px 0px black, 
+    1px -1px 0px black, 
+    -1px 1px 0px black;
+}
+
+#gallery1-img1-input,
+#gallery1-img2-input,
+#gallery1-img3-input {
+    display: none;
+}
+=======
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -168,3 +584,4 @@ h3 {
     object-fit: cover; /* Ensures the image covers the entire banner area without distortion */
 }
 
+>>>>>>> 87b3c477c84110625b224d723a37036d05680aec
