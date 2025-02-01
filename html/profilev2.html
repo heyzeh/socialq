@@ -1,41 +1,120 @@
 <!DOCTYPE html>
-<html>
-    <head>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/profile.css">
-    </head>
-    <body>
-        <a href="profile_settings.html">Settings</a>
-        <div class="body" id="">
-            <div id="profile">
-                <div id="banner">
+    <title>Profile Page</title>
+</head>
+<body>
+    <div id="profile">
+        <!-- Banner Section -->
+        <div id="banner-container">
+            <img class="banner auth" id="banner-auth" src="../img/insert_banner.jpg" alt="Profile Banner">
+            <img class="banner unAuth" id="banner-unAuth" src="../img/insert_banner.jpg" alt="Profile Banner">
+            <div class="banner auth" id="banner-edit"><p id="banner-edit-text">Change Banner</p></div>
+            <input id="banner-input" type="file">
+        </div>
 
-                </div>
-                <div id="profile-image">
-                    <h2 id="profile-name">Harry Mcinsquash</h2>
-                    <img id="profile-picture" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Astro_Boy_anime_version.png/220px-Astro_Boy_anime_version.png" alt="">
-                    <h3 id="profile-type">Bowling <br> Tiktok</h3>
-                </div>
-                <div id="profile-body">
-                    <div id="profile-about">
-                        Im a good bowler and have heaps of tiktok fans
-                    </div>
-                    <div id="profile-gallery">
-                        <img class="gallery-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRep4-qBAPB7AqGQb_KqU8L8MlkaPZisWmzHQ&s" alt="">
-                        <img class="gallery-img" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/20240621_John_Furey_bowling_ball_release.jpg" alt="">
-                        <img class="gallery-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRH7jm6-QbjGpr2uZmOUB5fZvueUEDTCNKPQ&s" alt="">
-                        <img class="gallery-img" src="https://chameleonmemes.com/wp-content/uploads/2024/08/Barry-kept-himself-in-shape-Bowling-Memes.png" alt="">
-                    </div>
-                    <div id="profile-socials">
-                        Tiktok: tiktok/bowlingbarry <br>
-                        youtube: youtube/bowlingbarry <br>
-                        Instagram: instagram/bowlingbarry <br>
-                    </div>
+        <!-- Profile Image and Info -->
+        <div id="profile-header">
+            <div id="profile-image">
+                <img class="auth profile-picture" id="profile-picture-auth" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Astro_Boy_anime_version.png/220px-Astro_Boy_anime_version.png" alt="Profile Picture">
+                <img class="unAuth profile-picture" id="profile-picture-unAuth" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Astro_Boy_anime_version.png/220px-Astro_Boy_anime_version.png" alt="Profile Picture">
+                <div class="auth profile-picture" id="profile-picture-edit"><p id="profile-picture-edit-text">Change Picture</p></div>
+                <input id="profile-picture-input" type="file">
+            </div>
+            <div id="profile-info">
+                <h2 id="profile-full-name">Your Name</h2>
+                <div id="profile-type-platform">
+                    <h3 id="profile-type">Type</h3>
+                    <h3 id="profile-platform">Platform</h3>
                 </div>
             </div>
         </div>
-        <script src="../js/test.js"></script>
-        <script src="../js/header-footer.js"></script>
-        <script src="../js/profile.js"></script>
-    </body>
+
+        <!-- Profile Body -->
+        <div id="profile-social-bar">
+            <section id="profile-socials">
+                <h3>Socials</h3>
+                <p>this is where you can display your social media accounts</p>
+                <ul id="social-links">
+                    <!-- Social links dynamically added -->
+                </ul>
+            </section>
+        </div>
+            <div id="profile-body">
+                <div id="profile-left">
+                    <section id="profile-skills" class="profile-block profile-left">
+                        <h4>Skills & Expertise</h4>
+                        <p>Showcase your skills and strengths, such as photography, marketing, content creation, etc.</p>
+                    </section>
+                    <section id="profile-experience" class="profile-block profile-left">
+                        <h4>Professional Experience</h4>
+                        <p>Highlight your previous or current affiliate work and partnerships.</p>
+                    </section>
+                    <section id="profile-recommendations" class="profile-block profile-left">
+                        <h4>Recommendations</h4>
+                        <p>Share recommendations and feedback from past affiliates and clients.</p>
+                    </section>
+                </div>
+                <div id="profile-right">
+                    <section id="profile-about" class="profile-block profile-right">
+                        <h3>About Me</h3>
+                        <p id="profile-about-p">Write a brief introduction about yourself, your background, and interests.</p>
+                    </section>
+                    <section id="profile-availability" class="profile-block profile-right">
+                        <h3>Availability & Schedule</h3>
+                        <p id="profile-availability-p">Detail your availability, such as upload schedules, preferred types of ads to promote, or in-person work options.</p>
+                    </section>
+                    <section id="profile-gallery" class="profile-block profile-right">
+                        <div id="gallery-edit">
+                        <h3>Gallery</h3> <span id="gallery-change" class="auth"><img id="gallery-change-img" src="../img/edit-icon.jpg" alt=""></span>
+                        </div>
+                        <div class="hidden" id="gallery-select">
+                            <div id="gallery1-select">Gallery Style 1</div>
+                            <div id="gallery2-select"> Gallery Style 2</div>
+                        </div>
+                        <div id="gallery-container">
+                            <p>Display photos that showcase your content or personality. Customize the layout, size, and arrangement of images as needed.</p>
+                            <div id="gallery1">
+                                <!-- 9:16 aspect ratio 1x3 -->
+                                <div id="gallery1-img1">
+                                    <img class="gallery1-imgs auth" id="gallery1-img1-auth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <img class="gallery1-imgs unAuth" id="gallery1-img1-unAuth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <div class="auth gallery1-imgs gallery-input" id="gallery1-img1-edit"><p id="gallery1-img1-edit-text">Change Picture</p></div>
+                                    <input id="gallery1-img1-input" type="file">
+                                </div>
+                                <div id="gallery1-img2">
+                                    <img class="gallery1-imgs auth" id="gallery1-img2-auth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <img class="gallery1-imgs unAuth" id="gallery1-img2-unAuth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <div class="auth gallery1-imgs gallery-input" id="gallery1-img2-edit"><p id="gallery1-img2-edit-text">Change Picture</p></div>
+                                    <input id="gallery1-img2-input" type="file">
+                                </div>
+                                <div id="gallery1-img3">
+                                    <img class="gallery1-imgs auth" id="gallery1-img3-auth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <img class="gallery1-imgs unAuth" id="gallery1-img3-unAuth" src="../img/1080x1920uploadphoto.jpg" alt="" >
+                                    <div class="auth gallery1-imgs gallery-input" id="gallery1-img3-edit"><p id="gallery1-img3-edit-text">Change Picture</p></div>
+                                    <input id="gallery1-img3-input" type="file">
+                                </div>
+                                <!-- <img class="gallery1-imgs" id="gallery1-img1" src="../img/1080x1920uploadphoto.jpg" alt="" > -->
+                                <!-- <img class="gallery1-imgs" id="gallery1-img2" src="../img/1080x1920uploadphoto.jpg" alt="" > -->
+                                <!-- <img class="gallery1-imgs" id="gallery1-img3" src="../img/1080x1920uploadphoto.jpg" alt="" > -->
+                            </div>
+                            <div id="gallery2">
+                                <!-- 16:9 aspect ration ?x? -->
+                                <img class="gallery2-imgs" id="gallery2-img1" src="../img/1920x1080uploadphoto.jpg" alt="" style="aspect-ratio: 16 / 9;">
+                                <img class="gallery2-imgs" id="gallery2-img2" src="../img/1920x1080uploadphoto.jpg" alt="" style="aspect-ratio: 16 / 9;">
+                                <img class="gallery2-imgs" id="gallery2-img3" src="../img/1920x1080uploadphoto.jpg" alt="" style="aspect-ratio: 16 / 9;">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/header-footer.js"></script>
+    <script type="module" src="../js/profile.js" defer></script>
+</body>
 </html>

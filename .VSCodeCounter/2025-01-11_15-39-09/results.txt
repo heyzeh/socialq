@@ -1,0 +1,62 @@
+Date : 2025-01-11 15:39:09
+Directory : e:\code\socialQ\v2
+Total : 30 files,  4587 codes, 326 comments, 656 blanks, all 5569 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |          7 |      2,108 |        259 |        366 |      2,733 |
+| HTML       |         14 |      1,097 |         31 |        107 |      1,235 |
+| CSS        |          7 |        991 |         36 |        181 |      1,208 |
+| JSON       |          2 |        391 |          0 |          2 |        393 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                            | files      | code       | comment    | blank      | total      |
++-------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                               |         30 |      4,587 |        326 |        656 |      5,569 |
+| . (Files)                                       |          1 |        227 |          2 |         13 |        242 |
+| css                                             |          7 |        991 |         36 |        181 |      1,208 |
+| html                                            |         13 |        870 |         29 |         94 |        993 |
+| js                                              |          7 |      2,108 |        259 |        366 |      2,733 |
+| json                                            |          2 |        391 |          0 |          2 |        393 |
++-------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                        | language   | code       | comment    | blank      | total      |
++-------------------------------------------------+------------+------------+------------+------------+------------+
+| e:\code\socialQ\v2\css\headerFooterStylev2.css  | CSS        |        186 |          5 |         41 |        232 |
+| e:\code\socialQ\v2\css\home.css                 | CSS        |         98 |          6 |         18 |        122 |
+| e:\code\socialQ\v2\css\homeStylev2.css          | CSS        |        211 |          3 |         33 |        247 |
+| e:\code\socialQ\v2\css\profile-settings-css.css | CSS        |         87 |          0 |         11 |         98 |
+| e:\code\socialQ\v2\css\profile.css              | CSS        |        141 |          5 |         25 |        171 |
+| e:\code\socialQ\v2\css\register.css             | CSS        |        164 |         12 |         36 |        212 |
+| e:\code\socialQ\v2\css\styles.css               | CSS        |        104 |          5 |         17 |        126 |
+| e:\code\socialQ\v2\html\about.html              | HTML       |         11 |          0 |          6 |         17 |
+| e:\code\socialQ\v2\html\contact.html            | HTML       |         12 |          0 |          4 |         16 |
+| e:\code\socialQ\v2\html\dontclick.html          | HTML       |         12 |          0 |          4 |         16 |
+| e:\code\socialQ\v2\html\faq.html                | HTML       |         12 |          0 |          6 |         18 |
+| e:\code\socialQ\v2\html\homev2.html             | HTML       |        110 |          7 |         12 |        129 |
+| e:\code\socialQ\v2\html\index.html              | HTML       |         50 |          2 |          6 |         58 |
+| e:\code\socialQ\v2\html\loginv2.html            | HTML       |         45 |          3 |          9 |         57 |
+| e:\code\socialQ\v2\html\profile_settings.html   | HTML       |         99 |          8 |         12 |        119 |
+| e:\code\socialQ\v2\html\profilev2.html          | HTML       |         36 |          5 |          7 |         48 |
+| e:\code\socialQ\v2\html\search.html             | HTML       |        124 |          1 |          2 |        127 |
+| e:\code\socialQ\v2\html\searchv2.html           | HTML       |         93 |          1 |          5 |         99 |
+| e:\code\socialQ\v2\html\signup.html             | HTML       |        254 |          2 |         19 |        275 |
+| e:\code\socialQ\v2\html\testing_links.html      | HTML       |         12 |          0 |          2 |         14 |
+| e:\code\socialQ\v2\index.html                   | HTML       |        227 |          2 |         13 |        242 |
+| e:\code\socialQ\v2\js\header-footer.js          | JavaScript |        103 |         14 |         25 |        142 |
+| e:\code\socialQ\v2\js\login.js                  | JavaScript |         86 |         17 |         24 |        127 |
+| e:\code\socialQ\v2\js\node.js                   | JavaScript |        325 |          4 |         11 |        340 |
+| e:\code\socialQ\v2\js\profile-settings.js       | JavaScript |        153 |         32 |         34 |        219 |
+| e:\code\socialQ\v2\js\register.js               | JavaScript |        194 |         33 |         26 |        253 |
+| e:\code\socialQ\v2\js\searchengine.js           | JavaScript |        606 |         79 |        118 |        803 |
+| e:\code\socialQ\v2\js\test.js                   | JavaScript |        641 |         80 |        128 |        849 |
+| e:\code\socialQ\v2\json\companies.json          | JSON       |        209 |          0 |          1 |        210 |
+| e:\code\socialQ\v2\json\users.json              | JSON       |        182 |          0 |          1 |        183 |
+| Total                                           |            |      4,587 |        326 |        656 |      5,569 |
++-------------------------------------------------+------------+------------+------------+------------+------------+

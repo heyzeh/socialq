@@ -12,6 +12,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    
 }
 
 .body{
@@ -20,29 +21,53 @@ body {
 
 #header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "socialQ . . loginSignup profileIconSmall";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* 5 equal columns */
+    grid-template-areas: "socialQ . . loginSignup loginProfile"; /* Define areas */
     height: 40px;
     background-color: white;
     width: 100%;
-    
+    justify-items: end; /* Align grid items to the right */
+}
+
+
+.top-right-header{
+    grid-area: loginProfile;
+    display: inline-flex;
+    /* border: solid blue; */
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+#profile-name {
+    font-size: 16px;
+    color: black;
+    margin: 0px;
+    grid-area: profilename;
+    /* border: solid 2px blue; */
+    display: flex;
+    width: 64px;
+    flex-direction: row-reverse;
+    padding-right: 2px;
+ }
+
+#profileIconSmall{
+    width: 38px;
+    height: 38px;
+
 }
 
 #login-signup{
-    grid-area: loginSignup;
-    width: 40px;
-    height: 40px;
-    margin-left: 100%;
-    display: grid;
-    margin-right: 0px;
+    display: none;
+    
 }
 
-#profileIconSmall{
-    grid-area: profileIconSmall;
-    width: 40px;
-    height: 40px;
-    float: right;
-    margin-left: auto;
+#signup-page{
+    margin-left: 2px;
+}
+
+#login-page{
+    margin-right: 2px;
 }
 
 #socialQ{
@@ -64,6 +89,7 @@ body {
     text-decoration: none;
     border-radius: 2px;
     margin: 2px;
+    height: 20px;
 }
 .menu:hover{
     color: pink;
@@ -84,6 +110,8 @@ body {
     gap: 2px;
     padding: 2px;
     text-align: center;
+    width: 100%;
+    height: 20px;
 }
 
 #searchInputs{
@@ -144,3 +172,60 @@ body {
 #company{
     grid-area: company;
 }
+
+#login-profile {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "profilename profilename profileimg"
+        "profiletab profiletab profiletab"
+        "profile profile profile";
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: white;
+    z-index: 3;
+    width: 106px; /* Set a fixed width */
+    justify-items: end; /* Align the grid content to the right */
+    /* padding: ; */
+}
+
+#profileprofile {
+    grid-area: profile;
+    display: flex;
+    color: black;
+    
+}
+
+#profile-header-tab {
+    grid-area: profiletab;
+    z-index: 10;
+    background-color: white;
+    /* border: pink 2px solid; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 106px; /* Make sure it takes up the full grid width */
+    height: 100%;
+    border-radius: 0 0 15px 15px;
+    margin-top: 10px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding-bottom: 3px;
+    flex-direction: column;
+    font-size: 14px;
+    
+}
+
+#header-profile-settings {
+    grid-area: profiletab; /* Same area as profileprofile */
+    display: none; /* Hide it unless toggled */
+    color: black;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+
+

@@ -1,3 +1,4 @@
+
 body{
     background-color: white;
 }
@@ -5,8 +6,7 @@ body{
 .three-corner{
     border-radius: 10px 10px 10px 0;
 }
-
-#titlecard {
+.titlecard {
     border: solid black;
     background-color: white;
     padding: 10px;
@@ -23,7 +23,7 @@ body{
     justify-content: space-between;
 } 
 
-#titlecard:hover{
+.titlecard:hover{
     border: 4px solid pink;
 }
 .cardSection{
@@ -83,13 +83,13 @@ body{
 
 #creator-search-tab{
     padding: 3px;
-    border-right: 2px solid black;
+    border-right: 5px solid black;
     border-top-right-radius: 9px;
 }
 
 #company-search-tab{
     padding: 3px;
-    border-bottom: 2px solid black;
+    border-bottom: 5px solid black;
 }
 
 #section1 {
@@ -117,491 +117,130 @@ body{
     align-items: center;
 }
 
-#section3{
-    flex: 0.5;
-    width: 100px;
-    height: 2000px;
-    border-radius: 10px;
-    padding: 2px;
-}
-
-/* Filter section styling to match your current theme */
-#section1 {
-    border: 2px solid black;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: black;
-    font-family: 'Arial', sans-serif;
-
-}
-
-/* Label styling */
-#section1 label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: black;
-}
-
-/* Select dropdown styling */
-select {
-    width: 150px;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid black;
-    border-radius: 8px;
-    background-color: white; /* Light background matching your header */
-    color: black;
-    font-family: 'Arial', sans-serif;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-/* Dropdown focus state */
-#section1 select:focus {
-    outline: none;
-    border-color: rgb(0, 63, 0); /* Dark green border on focus */
-    box-shadow: 0 0 5px rgba(0, 63, 0, 0.2);
-}
-
-/* Option styling */
-#section1 select option {
-    background-color: white;
-    color: black;
-}
-
-/* Heading styling refind*/
-#section1 h3 {
+#section3 {
+    grid-column: span 2;
     text-align: center;
-    color: black;
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-top: 20px;
+
+    border-radius: 8px;
+    padding: 15px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
 
-/* Adjustments for individual sections */
-#section1 select[name="gender-filter"] {
-    margin-bottom: 80px;
+/* Tabs */
+#search-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    background: #007bff;
 }
 
-#section1 {
-    flex-shrink: 0;
-    flex-grow: 0;
+#search-tabs div {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-#filter-search {
-    margin-left:40px ;
+#search-tabs div:hover {
+    background: #007bff;
 }
 
-#new-search{
-    display: grid;
-    z-index: -1;
-    position: relative;
-    width: 150px;
+/* Dropdowns */
+h4 {
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-.checkbox{
-    width: 7px;
-    height: 7px;
-    border: solid black;
-    margin-right: 5px;
-    margin-top: 1px;
-}
-.checkbox:hover{
-    border: solid pink;
-    background-color: pink;
-}
-#gender-box-text:hover, #follower-box-text:hover, #type-box-text:hover, #content-box-text:hover, #platform-box-text:hover{
-    background-color: pink;
+h4:hover {
+    background: #e9ecef;
+    color: #007bff;
 }
 
-#gender{
-    display: grid;
-    z-index: 1;
-}
-
-#gender-dropdown{
-    border: solid black;
-    border-radius: 0px 0px 10px 0;
-    padding: 5px;
+#platform-dropdown,
+#content-dropdown,
+#type-dropdown,
+#follower-dropdown,
+#engagement-dropdown,
+#gender-dropdown,
+#location-dropdown {
     display: none;
-    margin-top: -25px;
-    z-index: 100;
-    background-color: white;
-    position: relative
-}
-
-.gender-option {
-    display: flex;
-    z-index: 1;
-    position: relative;
-}
-
-#gender-box-text {
-    border: solid black;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 10px 10px 10px 0;
-    z-index: 1;
-    position: relative;
-}
-
-
-#follower{
-    display: grid;
-    background-color: white;
-}
-
-#follower-dropdown{
-    border: solid black;
-    border-radius: 0px 0px 10px 0;
-    padding: 5px;
-    display: none;
-    margin-top: -25px;
-    z-index: 100;
-    background-color: white;
-    position: relative
-}
-
-
-#follower-box-text {
-    border: solid black;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 10px 10px 10px 0;
-    background-color: white;
-    z-index: 2;
-}
-
-.follower-option{
-    display: flex;
-    background-color: white;
-}
-
-#type{
-    display: grid;
-    background-color: white;
-}
-
-#type-dropdown{
-    border: solid black;
-    border-radius: 0px 0px 10px 0;
-    padding: 5px;
-    display: none;
-    margin-top: -25px;
-    z-index: 100;
-    background-color: white;
-    position: relative
-}
-
-
-#type-box-text {
-    border: solid black;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 10px 10px 10px 0;
-    background-color: white;
-    z-index: 2;
-}
-
-.type-option{
-    display: flex;
-    background-color: white;
-}
-
-#content{
-    display: grid;
-    background-color: white;
-}
-
-#content-dropdown{
-    border: solid black;
-    border-radius: 0px 0px 10px 0;
-    padding: 5px;
-    display: none;
-    margin-top: -25px;
-    z-index: 100;
-    background-color: white;
-    position: relative
-}
-
-
-#content-box-text {
-    border: solid black;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 10px 10px 10px 0;
-    background-color: white;
-    z-index: 2;
-}
-
-.content-option{
-    display: flex;
-    background-color: white;
-}
-
-#platform{
-    display: grid;
-    background-color: white;
-}
-
-#platform-dropdown{
-    border: solid black;
-    border-radius: 0px 0px 10px 0;
-    padding: 5px;
-    display: none;
-    margin-top: -25px;
-    z-index: 100;
-    background-color: white;
-    position: relative
-}
-
-
-#platform-box-text {
-    border: solid black;
-    height: fit-content;
-    padding: 5px;
-    border-radius: 10px 10px 10px 0;
-    background-color: white;
-    z-index: 2;
-}
-
-.platform-option{
-    display: flex;
-    background-color: white;
-}
-
-#search {
-    position: relative;
-    padding: 20px; /* Optional padding */
-    background-image: url('../img/search_banner.png');
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    min-height: 300px; /* Set a minimum height based on your design */
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
     margin-top: 10px;
+    animation: fadeIn 0.3s ease;
 }
 
-#searchInputs {
-    position: absolute; /* Make it absolute relative to the parent (#search) */
-    bottom: 30px; /* Positions the element at the bottom of the parent */
-    left: 50%; /* Move to the center horizontally */
-    transform: translateX(-50%); /* Adjusts the element by half its width to center it */
-    display: grid;
-    grid-template-columns: 3fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 760px; /* 100% width minus margins on both sides */
-    height: auto; /* Set height to auto or a fixed height if needed */
+.platform-option,
+.content-option,
+.type-option,
+.follower-option,
+.engagement-option,
+.gender-option,
+.location-option {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-#search_words{
-    height: 22px;
-    padding: 5px;
+.platform-option:last-child,
+.content-option:last-child,
+.type-option:last-child,
+.follower-option:last-child,
+.engagement-option:last-child,
+.gender-option:last-child,
+.location-option:last-child {
+    border-bottom: none;
 }
 
- #select_field{
-    height: 36px;
-    padding: 5px;
- }
-
-#select_location{
-    height: 36px;
-    padding: 5px;
+.platform-option:hover,
+.content-option:hover,
+.type-option:hover,
+.follower-option:hover,
+.engagement-option:hover,
+.gender-option:hover,
+.location-option:hover {
+    background: #f8f9fa;
+    color: #0056b3;
 }
 
-#search_inputs{
-    bottom: 20px;
+.checkbox {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
-#search_button{
-    margin-left: 300px;
+.checkbox:hover {
+    background: #e9ecef;
+    transform: scale(1.1);
 }
 
-#search_img {
-    position: absolute;
-    top: 0; /* Adjust as needed */
-    left: 0; /* Adjust as needed */
-    width: 100%; /* Stretch to cover the parent container */
-    z-index: -1; /* Places the image behind other content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 
-
-
-
-
-/* MOBILE _____ MOBILE */
-
-@media only screen and (max-width: 600px) {
-    /* Mobile styles */
-    body {
-        background-color: white;
-        margin: 0;
-        padding: 0;
-        font-family: 'Arial', sans-serif;
-    }
-    
-    #titlecard {
-        border: solid black;
-        background-color: white;
-        padding: 10px;
-        border-radius: 10px 10px 10px 0;
-        width: 90%; /* Adjust width for mobile */
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-            "name name"
-            "type type"
-            "topLeft topRight"
-            "bottomLeft bottomRight";
-        justify-content: center;
-        gap: 5px; /* Add some gap between grid items for mobile */
-    }
-    
-    #titlecard:hover {
-        border: 4px solid pink;
-    }
-    
-    .cardSection {
-        border: solid black;
-        background-color: white;
-        border-radius: 10px 10px 10px 0;
-        box-sizing: border-box;
-        margin: 3px;
-        width: 100%;
-        padding: 10px;
-    }
-    
-    #name {
-        grid-area: name;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    #type {
-        grid-area: type;
-        width: 100%;
-    }
-    
-    #topLeft, #topRight, #bottomLeft, #bottomRight {
-        padding: 5px;
-    }
-    
-    #body {
-        display: flex;
-        flex-direction: column; /* Stack sections vertically */
-        padding: 5px;
-        gap: 10px;
-        background-color: white;
-    }
-    
-    #section1, #section2, #section3 {
-        width: 100%;
-        margin-top: 10px;
-        border: solid black;
-        background-color: white;
-        border-radius: 10px;
-        padding: 10px;
-    }
-    
-    #section2 {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    #section3 {
-        height: auto;
-    }
-    
-    /* Adjustments for form section */
-    #section1 {
-        border: 2px solid black;
-        padding: 10px;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        color: black;
-    }
-    
-    #section1 label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: black;
-    }
-    
-    select {
-        width: 100%; /* Full width for mobile */
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid black;
-        border-radius: 8px;
-    }
-    
-    #filter-search, #new-search {
-        width: 100%; /* Full width on mobile */
-    }
-    
-    .checkbox {
-        width: 15px;
-        height: 15px;
-        border: solid black;
-        margin-right: 5px;
-    }
-    
-    #gender, #follower, #type, #content, #platform {
-        display: grid;
-        background-color: white;
-    }
-    
-    .dropdown {
-        border: solid black;
-        border-radius: 0px 0px 10px 0;
-        padding: 5px;
-        display: none;
-        background-color: white;
-        position: relative;
-    }
-    
-    .box-text {
-        border: solid black;
-        padding: 10px;
-        border-radius: 10px 10px 10px 0;
-    }
-    
-    .dropdown-option {
-        display: flex;
-        background-color: white;
-    }
-    
-    /* Add responsive breakpoints */
-    @media (min-width: 600px) {
-        #titlecard {
-            width: 75%; /* For larger mobile screens or small tablets */
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas:
-                "name name name type"
-                "topLeft topLeft topRight topRight"
-                "bottomLeft bottomLeft bottomRight bottomRight";
-        }
-    
-        #body {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-    
-        #section3 {
-            width: 100px;
-            height: 2000px;
-        }
-    }
-    
-}

@@ -7,53 +7,50 @@
         <a href="signup.html">SIGN UP NOW!</a>
         <form action="">
             <div>
-                <label for="Username">Username</label>
-                <input type="text" id="login-username" name="username">
+                <label for="email">Email</label>
+                <input type="text" id="login-email" name="email">
             </div>
             <div>
                 <label for="password">Password</label>
                 <input type="password" id="login-password" name="password">
             </div>
-            <button id="login-button" onclick="changeUsers(event)">Login</button> <br>
-            <p id="wrong_password"></p>
+            <!-- Change the button type to "button" to prevent form submission -->
+            <button type="button" id="login-button">Login</button> <br>
+            <!-- <button type="button" id="user-test">who is logged in</button> <br> -->
+            <!-- <button type="button" id="logout-button">Logout</button> -->
         </form>
     </div>
-    <div id="test-user">
-       <button onclick="refreshTest()">Update User Account Name</button>
-    </div>
-    <script src="../js/test.js"></script>
-    <script src="../js/header-footer.js"></script>
+    <script type="module">
+        import { loginUser,whoIsLoggedIn, logoutUser } from "../js/login.js";
+        
+        const login = document.getElementById("login-button");
+        const logintest = document.getElementById("user-test");
+        const logout = document.getElementById("logout-button");
 
-    <script>
-        // Declare currentUser as a global variable
-        var currentUser = localStorage.getItem("username") || "";
-  
-            function changeUsers(event) {
-                if (currentUser === "") {
-                    event.preventDefault();
-                    var input = document.getElementById("login-username").value;
-                    localStorage.setItem("username", input);
-                    currentUser = input;
-                    console.log("Logged in as:", currentUser);
+        login.addEventListener("click", (event) => {
+            console.log("loging button has been pressed");
+            
+            // Declare and assign values to email and password
+            const email = document.getElementById("login-email").value;
+            const password = document.getElementById("login-password").value;
 
-                    if(document.getElementById("login-username").value === ""){
-                        document.getElementById("wrong_password").innerHTML = "Please enter username and Password";
-                    } else {
-                        document.getElementById("wrong_password").innerHTML = currentUser + " has logged in";
-                    }
-                    
-                } else {
-                    event.preventDefault();
-                    document.getElementById("wrong_password").innerHTML = currentUser + " is already logged in!";
-                }
-            }
+            // Log the values
+            console.log("Email:", email, "Password: ####");
 
+            // Add additional logic for login here
+            loginUser(email,password);
+        });
 
-        function refreshTest() {
-            // Access the global currentUser variable
-            console.log("Current user:", currentUser);
-        }
+        logintest.addEventListener("click", (event) => {
+            whoIsLoggedIn();
+        })
 
+        logout.addEventListener("click", (event) => {
+            logoutUser();
+        })
     </script>
+
+    <script type="module" src="../js/header-footer.js"></script>
+    <script type="module" src="../js/login.js" defer></script>
 </body>
 </html>

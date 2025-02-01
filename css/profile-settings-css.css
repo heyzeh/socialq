@@ -1,44 +1,112 @@
+#profile-menu1{
+    margin-top: 61px;
+}
 #profile-body {
-    /* border:  2px solid black; */
     display: grid;
     grid-template-columns: 1fr 3fr;
     width: 90%;
-    margin-left: 5px;
-    margin-right: auto;
-    height: 90%;
-    margin-top: 20px;
+    margin: 20px auto;
+    height: auto;
+    gap: 10px;
 }
 
-.profile-menu-class{
-    border: 2px solid black;
-    padding: 2px;
-    font-size: 18px;   
+.profile-menu-class {
+    border-right: 2px solid black;
+    padding: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    /* background-color: #f9f9f9; */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#profile-info{
-    border: 2px solid black;
-    padding-left: 10px;
-    margin-left: 5px;
-    display: grid;
+.profile-menu-class:hover {
+    background-color: black;
+    color: white;
 }
 
-#profile-preferences{
-    border: 2px solid black;
-    padding-left: 10px;
-    margin-left: 5px;
+
+#profile-info,
+#profile-preferences,
+#profile-settings,
+#profile-billing,
+#profile-notifications,
+#profile-privacy,
+#profile-security,
+#profile-connected {
     display: none;
+    flex-direction: column; /* Stack items vertically */
+    background-color: #fff;
+    border-radius: 8px;
+    align-items: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start; /* Align items to the start (top) */
+    height: fit-content;
 }
 
-#profile-settings{
-    border: 2px solid black;
-    padding-left: 10px;
-    margin-left: 5px;
-    display: none;
+
+
+#profile-info {
+    display: flex; /* Default visible section */
+    
 }
 
-#profile-billing{
-    border: 2px solid black;
-    padding-left: 10px;
-    margin-left: 5px;
-    display: none;
+#profile-description {
+    margin: 10px 0;
+    width: 95%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    resize: none;
+}
+#profile-availability {
+    margin: 10px 0;
+    width: 95%;
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    resize: none;
+}
+
+#profile-info h2,
+#profile-preferences h2,
+#profile-settings h2,
+#profile-billing h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: left;
+}
+
+#logout {
+    margin-top: 15px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#logout:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+#logout:active {
+    background-color: #d32f2f;
+    transform: scale(0.98);
+}
+
+.unAuth{
+    display: block;
+}
+
+.auth{
+    display: block;
 }

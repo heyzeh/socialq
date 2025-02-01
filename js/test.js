@@ -1,3 +1,4 @@
+
 //backgroundImg is 720x120 
 
 let creators = [];
@@ -19,9 +20,16 @@ let searchCompanyType = [];
 let searchCompanyContent = [];
 let searchCompanyPlatform = [];
 
+let platformDropbox = document.getElementById("platform-box-text");
+let contentDropbox = document.getElementById("content-box-text");
+let typeDropbox = document.getElementById("type-box-text");
+let followerDropbox = document.getElementById("follower-box-text");
+let genderDropbox = document.getElementById("gender-box-text");
+
+let searchPlatformArray = [];
 let searchTab = "creator";
 
-function genderDropbox(id){
+genderDropbox.addEventListener("click", function(id){
     let genderDropdown = document.getElementById("gender-dropdown");
     console.log("genderDropbox was clicked");
    
@@ -33,7 +41,7 @@ function genderDropbox(id){
         document.getElementById("gender-box-text").style.borderRadius = "10px 10px 10px 0";
     }
     
-}
+});
 
 function clearGenderSelect(){
     let checkboxMale = document.getElementById("checkbox-male");
@@ -106,7 +114,7 @@ function selectGender(id){
 }
 
 //Follower dropbox
-function followerDropbox(id){
+followerDropbox.addEventListener("click", function(id){
     let followerDropdown = document.getElementById("follower-dropdown");
     console.log("followerDropbox was clicked");
    
@@ -118,20 +126,20 @@ function followerDropbox(id){
         document.getElementById("follower-box-text").style.borderRadius = "10px 10px 10px 0";
     }
     
-}
+});
 
 function clearFollowerSelect() {
     const followerOptions = [
-        { id: "checkbox-0k-10k", label: "0k-10k", value: "0k-10k" },
-        { id: "checkbox-10k-100k", label: "10k-100k", value: "10k-100k" },
-        { id: "checkbox-100k-250k", label: "100k-250k", value: "100k-250k" },
-        { id: "checkbox-250k-500k", label: "250k-500k", value: "250k-500k" },
-        { id: "checkbox-500k-1mil", label: "500k-1mil", value: "500k-1mil" },
-        { id: "checkbox-1mil-10mil", label: "1mil-10mil", value: "1mil-10mil" },
-        { id: "checkbox-10mil-25mil", label: "10mil-25mil", value: "10mil-25mil" },
-        { id: "checkbox-25mil-50mil", label: "25mil-50mil", value: "25mil-50mil" },
-        { id: "checkbox-50mil-100mil", label: "50mil-100mil", value: "50mil-100mil" },
-        { id: "checkbox-100mil+", label: "100mil+", value: "100mil+" }
+            { id: "checkbox-0k+", label: "0k+", value: "0k+" },
+            { id: "checkbox-10k+", label: "10k+", value: "10k+" },
+            { id: "checkbox-100k+", label: "100k+", value: "100k+" },
+            { id: "checkbox-250k+", label: "250k+", value: "250k+" },
+            { id: "checkbox-500k+", label: "500k+", value: "500k+" },
+            { id: "checkbox-1mil+", label: "1mil+", value: "1mil+" },
+            { id: "checkbox-10mil+", label: "10mil+", value: "10mil+" },
+            { id: "checkbox-25mil+", label: "25mil+", value: "25mil+" },
+            { id: "checkbox-50mil+", label: "50mil+", value: "50mil+" },
+            { id: "checkbox-100mil+", label: "100mil+", value: "100mil+" }
     ];
 
     followerOptions.forEach(option => {
@@ -144,17 +152,22 @@ function clearFollowerSelect() {
 
 
 function selectFollower(id) {
+    console.log("Click element id:" + id);
     const followerOptions = [
-        { id: "checkbox-0k-10k", label: "0k-10k", value: "0k-10k" },
-        { id: "checkbox-10k-100k", label: "10k-100k", value: "10k-100k" },
-        { id: "checkbox-100k-250k", label: "100k-250k", value: "100k-250k" },
-        { id: "checkbox-250k-500k", label: "250k-500k", value: "250k-500k" },
-        { id: "checkbox-500k-1mil", label: "500k-1mil", value: "500k-1mil" },
-        { id: "checkbox-1mil-10mil", label: "1mil-10mil", value: "1mil-10mil" },
-        { id: "checkbox-10mil-25mil", label: "10mil-25mil", value: "10mil-25mil" },
-        { id: "checkbox-25mil-50mil", label: "25mil-50mil", value: "25mil-50mil" },
-        { id: "checkbox-50mil-100mil", label: "50mil-100mil", value: "50mil-100mil" },
-        { id: "checkbox-100mil+", label: "100mil+", value: "100mil+" }
+        
+            { id: "checkbox-0k+", label: "0k+", value: "0k+" },
+            { id: "checkbox-10k+", label: "10k+", value: "10k+" },
+            { id: "checkbox-100k+", label: "100k+", value: "100k+" },
+            { id: "checkbox-250k+", label: "250k+", value: "250k+" },
+            { id: "checkbox-500k+", label: "500k+", value: "500k+" },
+            { id: "checkbox-1mil+", label: "1mil+", value: "1mil+" },
+            { id: "checkbox-10mil+", label: "10mil+", value: "10mil+" },
+            { id: "checkbox-25mil+", label: "25mil+", value: "25mil+" },
+            { id: "checkbox-50mil+", label: "50mil+", value: "50mil+" },
+            { id: "checkbox-100mil+", label: "100mil+", value: "100mil+" }
+            
+        
+        
         // Add more ranges here as needed
     ];
 
@@ -168,14 +181,20 @@ function selectFollower(id) {
 
     // Loop through the follower options to match the clicked checkbox
     if (searchTab === "creator") {
+        console.log("Creator mode selected");
         followerOptions.forEach(option => {
+            console.log("option.id:", option.id);
+            console.log("id:", id);
             if (option.id === id) {
+                console.log("matched! " + option.id + "with " + id );
                 // Set the background color for the selected option
                 element.style.backgroundColor = "black";
                 // Update the searchCreatorFollower global variable
                 searchCreatorFollower = option.value;
                 // Update the dropdown text
                 followerBoxText.innerHTML = option.label;
+            } else {
+                console.log("Didnt find a match with the followers");
             }
         });
 
@@ -184,6 +203,7 @@ function selectFollower(id) {
 
         //console.log("Selected Creator Followers: " + searchCreatorFollower);
     } else {
+        console.log("Company mode selected");
         followerOptions.forEach(option => {
             if (option.id === id) {
                 // Set the background color for the selected option
@@ -203,7 +223,8 @@ function selectFollower(id) {
 }
 
 //type dropbox
-function typeDropbox(id){
+
+typeDropbox.addEventListener("click", function(id){
     let typeDropdown = document.getElementById("type-dropdown");
    // console.log("typeDropbox was clicked");
    
@@ -215,15 +236,18 @@ function typeDropbox(id){
         document.getElementById("type-box-text").style.borderRadius = "10px 10px 10px 0";
     }
     
-}
+});
 
 function clearTypeSelect() {
     const typeOptions = [
-        { id: "checkbox-bowling", label: "bowling", value: "bowling" },
-        { id: "checkbox-baking", label: "baking", value: "baking" },
-        { id: "checkbox-gym", label: "gym", value: "gym" },
-        { id: "checkbox-surfing", label: "surfing", value: "surfing" }
+        { id: "checkbox-informative", label: "Informative", value: "informative" },
+        { id: "checkbox-entertaining", label: "Entertaining", value: "entertaining" },
+        { id: "checkbox-review", label: "Product Review/Unboxing", value: "review" },
+        { id: "checkbox-tutorial", label: "Tutorials/How-To", value: "tutorial" },
+        { id: "checkbox-artistic", label: "Artistic/Creative", value: "artistic" },
+        { id: "checkbox-type-other", label: "Other", value: "other" }
     ];
+    
 
     typeOptions.forEach(option => {
         let checkbox = document.getElementById(option.id);
@@ -235,11 +259,15 @@ function clearTypeSelect() {
 
 function selectType(id) {
     const typeOptions = [
-        { id: "checkbox-bowling", label: "bowling", value: "bowling"},
-        { id: "checkbox-baking", label: "baking", value: "baking"},
-        { id: "checkbox-gym", label: "gym", value: "gym"},
-        { id: "checkbox-surfing", label: "surfing", value: "surfing"}
+        { id: "checkbox-informative", label: "Informative", value: "informative" },
+        { id: "checkbox-entertaining", label: "Entertaining", value: "entertaining" },
+        { id: "checkbox-review", label: "Product Review/Unboxing", value: "review" },
+        { id: "checkbox-tutorial", label: "Tutorials/How-To", value: "tutorial" },
+        { id: "checkbox-artistic", label: "Artistic/Creative", value: "artistic" },
+        { id: "checkbox-type-other", label: "Other", value: "other" }
     ];
+    
+    
 
     // Get the element and dropdown elements
     let element = document.getElementById(id);
@@ -287,7 +315,7 @@ function selectType(id) {
 }
 
 //content dropbox
-function contentDropdown() {
+contentDropbox.addEventListener("click", function(id){
     let contentDropdown = document.getElementById("content-dropdown");
     //console.log("Content dropdown was clicked");
    
@@ -298,16 +326,23 @@ function contentDropdown() {
         contentDropdown.style.display = "none";
         document.getElementById("content-box-text").style.borderRadius = "10px 10px 10px 0";
     }
-}
+});
 
 function clearContentSelect() {
     const contentOptions = [
         { id: "checkbox-select-type", label: "Select Content", value: "select-content" },
         { id: "checkbox-sports", label: "Sports", value: "sports" },
         { id: "checkbox-lifestyle", label: "Lifestyle", value: "lifestyle" },
-        { id: "checkbox-fitness", label: "Fitness", value: "fitness" },
-        { id: "checkbox-cooking", label: "Cooking", value: "cooking" }
+        { id: "checkbox-fitness", label: "Fitness & Health", value: "fitness" },
+        { id: "checkbox-cooking", label: "Cooking & Food", value: "cooking" },
+        { id: "checkbox-tech", label: "Technology & Gaming", value: "tech" },
+        { id: "checkbox-beauty", label: "Beauty & Fashion", value: "beauty" },
+        { id: "checkbox-education", label: "Education", value: "education" },
+        { id: "checkbox-travel", label: "Travel & Adventure", value: "travel" },
+        { id: "checkbox-finance", label: "Finance & Business", value: "finance" },
+        { id: "checkbox-content-other", label: "Other", value: "other" }
     ];
+    
 
     contentOptions.forEach(option => {
         let checkbox = document.getElementById(option.id);
@@ -322,16 +357,23 @@ function selectContent(id) {
         { id: "checkbox-select-type", label: "Select Content", value: "select-content" },
         { id: "checkbox-sports", label: "Sports", value: "sports" },
         { id: "checkbox-lifestyle", label: "Lifestyle", value: "lifestyle" },
-        { id: "checkbox-fitness", label: "Fitness", value: "fitness" },
-        { id: "checkbox-cooking", label: "Cooking", value: "cooking" }
+        { id: "checkbox-fitness", label: "Fitness & Health", value: "fitness" },
+        { id: "checkbox-cooking", label: "Cooking & Food", value: "cooking" },
+        { id: "checkbox-tech", label: "Technology & Gaming", value: "tech" },
+        { id: "checkbox-beauty", label: "Beauty & Fashion", value: "beauty" },
+        { id: "checkbox-education", label: "Education", value: "education" },
+        { id: "checkbox-travel", label: "Travel & Adventure", value: "travel" },
+        { id: "checkbox-finance", label: "Finance & Business", value: "finance" },
+        { id: "checkbox-content-other", label: "Other", value: "other" }
     ];
+    
 
     // Get the element and dropdown elements
     let element = document.getElementById(id);
-
     // Loop through the content options to match the clicked checkbox
     if (searchTab === "creator") {
         contentOptions.forEach(option => {
+            console.log(option.id + " === " + id);
             if (option.id === id) {
                 if (!searchCreatorContent.includes(option.value)) {
                     element.style.backgroundColor = "black"; // Selected color
@@ -351,8 +393,10 @@ function selectContent(id) {
 
        // console.log("Selected Creator Content: " + searchCompanyContent);
     } else {
+        
         contentOptions.forEach(option => {
             if (option.id === id) {
+
                 if (!searchCompanyContent.includes(option.value)) {
                     element.style.backgroundColor = "black"; // Selected color
                     searchCompanyContent.push(option.value);
@@ -374,7 +418,7 @@ function selectContent(id) {
 }
 
 //platform search
-function platformDropbox() {
+platformDropbox.addEventListener("click", function(id){
     let platformDropdown = document.getElementById("platform-dropdown");
     //console.log("platformDropbox was clicked");
     
@@ -385,7 +429,7 @@ function platformDropbox() {
         platformDropdown.style.display = "none";
         document.getElementById("platform-box-text").style.borderRadius = "10px 10px 10px 0";
     }
-}
+});
 
 function clearPlatformSelect() {
     const platformOptions = [
@@ -393,8 +437,13 @@ function clearPlatformSelect() {
         { id: "checkbox-instagram", label: "Instagram", value: "platform-instagram" },
         { id: "checkbox-facebook", label: "Facebook", value: "platform-facebook" },
         { id: "checkbox-tiktok", label: "TikTok", value: "platform-tiktok" },
-        { id: "checkbox-streaming", label: "Streaming", value: "platform-streaming" }
+        { id: "checkbox-streaming", label: "Streaming", value: "platform-streaming" },
+        { id: "checkbox-linkedin", label: "LinkedIn", value: "platform-linkedin" },
+        { id: "checkbox-pinterest", label: "Pinterest", value: "platform-pinterest" },
+        { id: "checkbox-snapchat", label: "Snapchat", value: "platform-snapchat" },
+        { id: "checkbox-other", label: "Other", value: "platform-other" }
     ];
+    
     
 
     platformOptions.forEach(option => {
@@ -411,8 +460,13 @@ function selectPlatform(id) {
         { id: "checkbox-instagram", label: "Instagram", value: "platform-instagram" },
         { id: "checkbox-facebook", label: "Facebook", value: "platform-facebook" },
         { id: "checkbox-tiktok", label: "TikTok", value: "platform-tiktok" },
-        { id: "checkbox-streaming", label: "Streaming", value: "platform-streaming" }
+        { id: "checkbox-streaming", label: "Streaming", value: "platform-streaming" },
+        { id: "checkbox-linkedin", label: "LinkedIn", value: "platform-linkedin" },
+        { id: "checkbox-pinterest", label: "Pinterest", value: "platform-pinterest" },
+        { id: "checkbox-snapchat", label: "Snapchat", value: "platform-snapchat" },
+        { id: "checkbox-other", label: "Other", value: "platform-other" }
     ];
+    
     console.log("Log from selectPlatforms()");
     // Get the element and dropdown elements
     let element = document.getElementById(id);
@@ -577,25 +631,25 @@ function filterCreators() {
     // Filter by follower range if specified
     if (searchCreatorFollower !== "") {
         const range = maxMin(searchCreatorFollower); // Assuming maxMin gives min and max range
-        creatorSearch = creatorSearch.filter(creator => creator.followers >= range.min && creator.followers <= range.max);
+        creatorSearch = creatorSearch.filter(creator => creator.followers === searchCreatorFollower);
         console.log("After follower filter:", creatorSearch);
     }
 
     // Filter by type if specified and not empty
     if (searchCreatorContent && searchCreatorContent.length > 0) {
-        creatorSearch = creatorSearch.filter(creators => searchCreatorContent.includes(creators.type));
+        creatorSearch = creatorSearch.filter(creators => searchCreatorContent.includes(creators.content));
         console.log("After type filter:", creatorSearch);
     }
 
     // Filter by content category if specified and not empty
     if (searchCreatorType && searchCreatorType.length > 0) {
-        creatorSearch = creatorSearch.filter(creators => searchCreatorType.includes(creators.category));
+        creatorSearch = creatorSearch.filter(creators => searchCreatorType.includes(creators.type));
         console.log("After content category filter:", creatorSearch);
     }
 
     // Filter by platform if specified and not empty
     if (searchCreatorPlatform && searchCreatorPlatform.length > 0) {
-        creatorSearch = creatorSearch.filter(creators => searchCreatorPlatform.includes(creators.role)); // Use 'platform'
+        creatorSearch = creatorSearch.filter(creators => searchCreatorPlatform.includes(creators.platform)); // Use 'platform'
         console.log("After platform filter:", creatorSearch);
     }
 
@@ -620,20 +674,20 @@ function filterCompany() {
     // Filter by follower range if specified
     if (searchCompanyFollower !== "") {
         const range = maxMin(searchCompanyFollower); // Assuming maxMin gives min and max range
-        companySearch = companySearch.filter(company => company.followers >= range.min && company.followers <= range.max);
+        companySearch = companySearch.filter(company => company.followers === searchCompanyFollower );
         console.log("After follower filter:", companySearch);
     }
 
     // Filter by type if specified and not empty
     if (searchCompanyType && searchCompanyType.length > 0) {
-        companySearch = companySearch.filter(company => searchCompanyType.includes(company.category));
+        companySearch = companySearch.filter(company => searchCompanyType.includes(company.type));
         console.log("After type filter:", companySearch);
     }
 
     // Filter by content category if specified and not empty
     if (searchCompanyContent && searchCompanyContent.length > 0) {
         console.log("DO WE MATCH ?? " + searchCompanyContent + " " + company.type);
-        companySearch = companySearch.filter(company => searchCompanyContent.includes(company.type));
+        companySearch = companySearch.filter(company => searchCompanyContent.includes(company.content));
         console.log("After content category filter:", companySearch);
     }
 
@@ -710,8 +764,8 @@ function generateCards() {
                     <div class="cardSection" id="name">${item.name}</div>
                     <div class="cardSection" id="type">${item.type}</div>
                     <div class="cardSection" id="topLeft">followers - ${item.followers}</div>
-                    <div class="cardSection" id="topRight">${item.category}</div>
-                    <div class="cardSection" id="bottomLeft">${item.role}</div>
+                    <div class="cardSection" id="topRight">${item.content}</div>
+                    <div class="cardSection" id="bottomLeft">${item.platform}</div>
                     <div class="cardSection" id="bottomRight"><a href="">${item.link}</a></div>
                 `;
                 
@@ -740,8 +794,8 @@ function generateCards() {
                 <div class="cardSection" id="name">${item.name}</div>
                 <div class="cardSection" id="type">${item.type}</div>
                 <div class="cardSection" id="topLeft">followers - ${item.followers}</div>
-                <div class="cardSection" id="topRight">${item.category}</div>
-                <div class="cardSection" id="bottomLeft">${item.role}</div>
+                <div class="cardSection" id="topRight">${item.content}</div>
+                <div class="cardSection" id="bottomLeft">${item.type}</div>
                 <div class="cardSection" id="bottomRight"><a href="">${item.link}</a></div>
             `;
             
@@ -784,6 +838,7 @@ async function getCompanyData(){
     console.log(companies);
     companySearch = companies;
     generateCards();
+    
     }catch(error) {
         console.error(error.message);
     }
@@ -791,3 +846,4 @@ async function getCompanyData(){
 
 getCreatorsData();
 getCompanyData();
+generateCards();

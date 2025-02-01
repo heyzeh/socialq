@@ -1,187 +1,182 @@
 [
   {
-    "name": "Harrison @Harrison",
-    "type": "sports",
-    "followers": 100000,
-    "category": "bowling",
-    "role": "platform-tiktok",
-    "link": "@Harrison(link)",
-    "backgroundImg": "../img/wavetitle.png",
+    "name": "Sophie Brown",
+    "link": "@EcoSophie",
+    "gender": "female",
+    "followers": "10k+",
+    "content": "fitness",
+    "type": "entertaining",
+    "platform": "platform-instagram"
+  },
+  {
+    "name": "Jackson Miller",
+    "link": "@JaxTech",
     "gender": "male",
-    "username": "heyzah"
+    "followers": "100k+",
+    "content": "technology",
+    "type": "tutorial",
+    "platform": "platform-youtube"
   },
   {
-    "name": "Alex @Alex",
-    "type": "fitness",
-    "followers": 200000,
-    "category": "gym",
-    "role": "platform-youtube",
-    "link": "@Alex(link)",
-    "backgroundImg": "",
-    "gender": "male"
+    "name": "Emma Roberts",
+    "link": "@EmmaTheChef",
+    "gender": "female",
+    "followers": "50mil+",
+    "content": "cooking",
+    "type": "informative",
+    "platform": "platform-facebook"
   },
   {
-    "name": "Chloe",
-    "type": "lifestyle",
-    "followers": 10,
-    "category": "baking",
-    "role": "platform-influencer",
-    "link": "@Chloe(link)",
-    "backgroundImg": "../img/cookies.png",
-    "gender": "female"
+    "name": "Aiden Taylor",
+    "link": "@AidenFitness",
+    "gender": "male",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-instagram"
   },
   {
-    "name": "Liam @LiamFitness",
-    "type": "fitness",
-    "followers": 50000,
-    "category": "running",
-    "role": "platform-instagram",
-    "link": "@LiamFitness(link)",
-    "gender": "male"
+    "name": "Olivia Martin",
+    "link": "@OliviaAdventures",
+    "gender": "female",
+    "followers": "100k+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
   },
   {
-    "name": "Mia @TechWithMia",
-    "type": "technology",
-    "followers": 300000,
-    "category": "gadgets",
-    "role": "platform-blogger",
-    "link": "@TechWithMia(link)",
-    "backgroundImg": "",
-    "gender": "female"
+    "name": "Liam Johnson",
+    "link": "@LiamGamer",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
   },
   {
-    "name": "Sophia @SophiaDIY",
-    "type": "lifestyle",
-    "followers": 150000,
-    "category": "DIY",
-    "role": "platform-tiktok",
-    "link": "@SophiaDIY(link)",
-    "gender": "female"
+    "name": "Chloe Wilson",
+    "link": "@ChloeBeauty",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "tutorial",
+    "platform": "platform-instagram"
   },
   {
-    "name": "Ryan @GamingRyan",
-    "type": "gaming",
-    "followers": 500000,
-    "category": "streaming",
-    "role": "platform-streamer",
-    "link": "@GamingRyan(link)",
-    "gender": "male"
+    "name": "Ethan Harris",
+    "link": "@EthanSports",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "informative",
+    "platform": "platform-facebook"
   },
   {
-    "name": "Emma @EcoEmma",
-    "type": "environment",
-    "followers": 20000,
-    "category": "sustainability",
-    "role": "platform-influencer",
-    "link": "@EcoEmma(link)",
-    "gender": "female"
+    "name": "Isabella Clark",
+    "link": "@BellaTravel",
+    "gender": "female",
+    "followers": "25mil+",
+    "content": "travel",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
   },
   {
-    "name": "Lucas @ArtByLucas",
-    "type": "art",
-    "followers": 80000,
-    "category": "painting",
-    "role": "platform-artist",
-    "link": "@ArtByLucas(link)",
-    "gender": "male"
+    "name": "Mason Scott",
+    "link": "@MasonTech",
+    "gender": "male",
+    "followers": "500k+",
+    "content": "technology",
+    "type": "review",
+    "platform": "platform-streaming"
   },
   {
-    "name": "Ava @CookWithAva",
-    "type": "food",
-    "followers": 120000,
-    "category": "cooking",
-    "role": "platform-youtube",
-    "link": "@CookWithAva(link)",
-    "gender": "female"
+    "name": "Ava Lewis",
+    "link": "@AvaFitness",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "fitness",
+    "type": "informative",
+    "platform": "platform-youtube"
   },
   {
-    "name": "Isabella @SurfBella",
-    "type": "sports",
-    "followers": 300000,
-    "category": "surfing",
-    "role": "platform-instagram",
-    "link": "@SurfBella(link)",
-    "gender": "female"
+    "name": "Oliver Walker",
+    "link": "@OliverInTheKitchen",
+    "gender": "male",
+    "followers": "250k+",
+    "content": "cooking",
+    "type": "tutorial",
+    "platform": "platform-facebook"
   },
   {
-    "name": "Daniel @NewsDan",
-    "type": "journalism",
-    "followers": 1000000,
-    "category": "breaking news",
-    "role": "platform-journalist",
-    "link": "@NewsDan(link)",
-    "gender": "male"
+    "name": "Charlotte Young",
+    "link": "@CharlotteFinance",
+    "gender": "female",
+    "followers": "100mil+",
+    "content": "finance",
+    "type": "informative",
+    "platform": "platform-linkedin"
   },
   {
-    "name": "Megan @DanceQueenMegan",
-    "type": "dance",
-    "followers": 500000,
-    "category": "hip hop",
-    "role": "platform-tiktok",
-    "link": "@DanceQueenMegan(link)",
-    "gender": "female"
+    "name": "James Adams",
+    "link": "@JamesGaming",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "gaming",
+    "type": "review",
+    "platform": "platform-youtube"
   },
   {
-    "name": "Olivia @CookedWithLiv",
-    "type": "food",
-    "followers": 10000,
-    "category": "vegan recipes",
-    "role": "platform-blogger",
-    "link": "@CookedWithLiv(link)",
-    "gender": "female"
+    "name": "Mia Baker",
+    "link": "@MiaFashion",
+    "gender": "female",
+    "followers": "500k+",
+    "content": "beauty",
+    "type": "artistic",
+    "platform": "platform-instagram"
   },
   {
-    "name": "James @ComicJames",
-    "type": "comedy",
-    "followers": 75000,
-    "category": "stand-up",
-    "role": "platform-youtube",
-    "link": "@ComicJames(link)",
-    "gender": "male"
+    "name": "Lucas Evans",
+    "link": "@LucasEducation",
+    "gender": "male",
+    "followers": "100k+",
+    "content": "education",
+    "type": "informative",
+    "platform": "platform-linkedin"
   },
   {
-    "name": "Lily @ArtWithLily",
-    "type": "art",
-    "followers": 2000000,
-    "category": "sculpture",
-    "role": "platform-instagram",
-    "link": "@ArtWithLily(link)",
-    "gender": "female"
+    "name": "Amelia Carter",
+    "link": "@AmeliaHealth",
+    "gender": "female",
+    "followers": "250k+",
+    "content": "fitness",
+    "type": "tutorial",
+    "platform": "platform-facebook"
   },
   {
-    "name": "Sam @StreamSam",
-    "type": "gaming",
-    "followers": 600000,
-    "category": "live streaming",
-    "role": "platform-streamer",
-    "link": "@StreamSam(link)",
-    "gender": "male"
+    "name": "Daniel Roberts",
+    "link": "@DanielSports",
+    "gender": "male",
+    "followers": "10k+",
+    "content": "sports",
+    "type": "entertaining",
+    "platform": "platform-tiktok"
   },
   {
-    "name": "Grace @GraceHealth",
-    "type": "fitness",
-    "followers": 250000,
-    "category": "nutrition",
-    "role": "platform-influencer",
-    "link": "@GraceHealth(link)",
-    "gender": "female"
+    "name": "Ella Mitchell",
+    "link": "@EllaLifestyle",
+    "gender": "female",
+    "followers": "1mil+",
+    "content": "lifestyle",
+    "type": "tutorial",
+    "platform": "platform-instagram"
   },
   {
-    "name": "Ethan @OutdoorEthan",
-    "type": "adventure",
-    "followers": 40000,
-    "category": "hiking",
-    "role": "platform-influencer",
-    "link": "@OutdoorEthan(link)",
-    "gender": "male"
-  },
-  {
-    "name": "Sophie @EcoSophie",
-    "type": "environment",
-    "followers": 150000,
-    "category": "wildlife",
-    "role": "platform-youtube",
-    "link": "@EcoSophie(link)",
-    "gender": "female"
+    "name": "William White",
+    "link": "@WillTech",
+    "gender": "male",
+    "followers": "50mil+",
+    "content": "technology",
+    "type": "informative",
+    "platform": "platform-streaming"
   }
 ]
