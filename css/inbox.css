@@ -1,0 +1,77 @@
+#message-box{
+    border: black solid 2px;
+    height: 1200px;
+    display: grid;
+    grid-template-areas: 
+    "contacts chatbox chatbox chatbox";
+    padding: 5px;
+    gap: 5px;
+}
+
+#contacts{
+    border: black solid 2px;
+    grid-area: contacts;
+    height: 1000px;
+}
+#chatbox{
+    border: black solid 2px;
+    grid-area: chatbox;
+    min-height: 1200px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2px;
+}
+#chatarea{
+    border: 2px solid black;
+    height: 100%;
+}
+#message-bar{
+    display: flex;
+    width: 100%;
+}
+#message-input{
+    resize: none;
+    border: solid 2px black;
+    height: 30px;
+    width: 100%;
+    align-content: center;
+}
+#message-send-button{
+    border: solid black 2px;
+    width: 60px;
+    height: 34px;
+    text-align: center;
+    align-content: center;
+}
+
+
+.message {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.message-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.timestamp {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.message-body {
+    margin-top: 10px;
+}
+
+.message p {
+    margin: 0;
+}
+
+.contact-list{
+    border: solid black 2px;
+}
