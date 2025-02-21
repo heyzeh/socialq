@@ -1,61 +1,65 @@
-/* General Reset */
-body, html {
+/* General reset */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    overflow: hidden; /* Prevent the whole page from scrolling */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    overflow: hidden;  /* Prevents the whole page from scrolling */
     background-color: #f4f4f4;
 }
 
-/* The message container */
+/* Ensure the body is mobile-friendly */
 #message-box {
+    margin: 10px;
     display: grid;
-    grid-template-columns: 1fr;  /* Stacks contacts and chatbox vertically */
     grid-template-areas: 
-        "contacts"
-        "chatbox";
-    height: 100vh; /* Full viewport height */
-    width: 100%;
-    margin: 20px;
-    overflow: hidden; /* Prevent scrolling inside the message box */
+        "contacts chatbox";
+    grid-template-columns: 1fr;  /* Single-column layout on mobile */
+    gap: 10px;
+    overflow: hidden;  /* Prevent scrolling inside the message box */
+}
+
+@media (min-width: 768px) {
+    #message-box {
+        grid-template-areas: "contacts chatbox chatbox chatbox";
+        grid-template-columns: 220px 1fr; /* Side-by-side on larger screens */
+    }
 }
 
 /* Contacts Section */
 #contacts {
-    background-color: white;
+    grid-area: contacts;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
     overflow-y: auto;
-    height: auto;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contacts-title {
-    font-size: 1.2em;
-    padding: 10px;
+    display: flex;
+    align-items: center;
     border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
 
 .contact-list {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 8px;
+    padding: 8px 0;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .contact-list:hover {
-    background-color: #e0e0e0;
+    background-color: #eee;
 }
 
 .message-profile-photo {
@@ -63,65 +67,59 @@ body {
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #000;
 }
 
-/* Chatbox Section */
+/* Chat Section */
 #chatbox {
-    background-color: white;
+    grid-area: chatbox;
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    overflow: hidden;
 }
 
 #chat-title {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 #chat-profile-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #000;
-}
-
-#chat-recipent-name {
-    font-size: 1.1em;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #chatarea {
-    flex-grow: 1;
-    overflow-y: auto;
     padding: 10px;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: auto;
+    height: calc(100vh - 200px);  /* Dynamic height based on screen size */
 }
 
 .message {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     padding: 10px;
-    max-width: 80%;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    max-width: 70%;
 }
 
 .left {
+    background-color: #e0e0e0;
     align-self: flex-start;
-    background-color: lightgray;
 }
 
 .right {
+    background-color: #76aaff;
     align-self: flex-end;
-    background-color: lightblue;
+    color: white;
 }
 
 .message-header {
@@ -142,110 +140,61 @@ body {
     margin: 0;
 }
 
-/* Message Bar */
+/* Message input bar */
 #message-bar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px;
+    background-color: #fff;
     border-top: 1px solid #ccc;
 }
 
 #message-input {
-    flex-grow: 1;
+    width: 80%;
     height: 40px;
-    resize: none;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-right: 10px;
+    font-size: 1em;
 }
 
 #message-send-button {
-    width: 60px;
+    width: 50px;
     height: 40px;
-    background-color: midnightblue;
+    background-color: #76aaff;
     color: white;
-    border: none;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
-    font-size: 1.1em;
+    text-align: center;
 }
 
 #message-send-button:hover {
-    background-color: darkblue;
+    background-color: #5a91cc;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    #message-box {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "contacts"
-            "chatbox";
-    }
-
+/* Mobile responsiveness */
+@media (max-width: 600px) {
     #contacts {
-        padding: 15px;
+        width: 100%;
         height: auto;
-        max-height: 400px;  /* Restrict height for mobile */
     }
 
     #chatbox {
-        padding: 10px;
-    }
-
-    .contact-list {
-        padding: 8px;
-        gap: 8px;
-    }
-
-    .message-profile-photo {
-        width: 35px;
-        height: 35px;
-    }
-
-    #chat-title {
-        font-size: 1em;
-        padding-bottom: 5px;
-    }
-
-    #chatarea {
-        height: auto;
-        max-height: 500px;
-    }
-
-    .message {
-        max-width: 90%;
-        margin: 5px auto;
-    }
-
-    .left, .right {
-        width: 100%;
-        padding: 8px;
+        height: 100%;
     }
 
     #message-input {
-        height: 40px;
+        width: 70%;
     }
 
     #message-send-button {
-        width: 50px;
-        height: 35px;
-    }
-}
-
-/* Tablet Screens */
-@media (max-width: 1024px) {
-    #message-box {
-        grid-template-columns: 1fr 3fr;
-        grid-template-areas: "contacts chatbox";
+        width: 20%;
     }
 
-    #contacts {
-        width: 180px;
-    }
-
-    #chatbox {
-        min-height: 500px;
+    /* Make message box scrollable on mobile */
+    #chatarea {
+        height: 60vh;
     }
 }
