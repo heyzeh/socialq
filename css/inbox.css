@@ -1,57 +1,156 @@
-#message-box{
-    border: black solid 2px;
-    height: 1200px;
-    display: grid;
-    grid-template-areas: 
-    "contacts chatbox chatbox chatbox";
-    padding: 5px;
-    gap: 5px;
+/* Ensure the body does not scroll */
+body {
+    margin: 0;
+    overflow: hidden;  /* Prevents the whole page from scrolling */
 }
 
-#contacts{
-    border: black solid 2px;
-    grid-area: contacts;
-    height: 1000px;
+/* The message container */
+#message-box {
+    /* border: pink solid 2px; */
+    margin: 20px;
+    height: 1200px; /* Fixed height for the message box */
+    display: grid;
+    grid-template-areas: "contacts chatbox chatbox chatbox";
+    grid-template-columns: 220px auto; /* Fixes the gap */
+    overflow: hidden;  /* Prevent scrolling inside the message box */
 }
-#chatbox{
-    border: black solid 2px;
+
+
+#contacts {
+    /* border: blue solid 2px; */
+    grid-area: contacts;
+    height: 500px; /* Fixed height for contacts */
+    width: 220px;
+}
+
+#contacts-title{   
+    /* border: solid 2px black; */
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0px;
+}
+
+.contact-list {
+    /* border-top: solid purple 2px; */
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between image and text */
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.message-profile-photo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    border: 2px black solid;
+    border-radius: 100%;
+}
+
+.contact-list:hover{
+    /* border-top: solid purple 2px; */
+    background-color: purple;
+    color: white;
+    padding: 2px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+
+#chatbox {
+    /* border: orange solid 2px; */
     grid-area: chatbox;
-    min-height: 1200px;
-    max-height: fit-content;
+    min-height: 600px; /* Adjust this as needed */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 2px;
+    overflow: hidden;  /* Prevent scrolling inside the chatbox */
 }
-#chatarea{
-    border: 2px solid black;
-    height: 100%;
-}
-#message-bar{
+#chat-title{
+    /* border: 2px palevioletred solid; */
+    border-left: 3px solid black;
+    padding-left: 5px;
     display: flex;
-    width: 100%;
+    border-bottom: 2px solid gray;
+    padding-bottom: 5px;
 }
-#message-input{
+
+#chat-profile-picture{
+    border: 2px black solid;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+#chat-recipent-name{
+    /* border: solid 2px blue; */
+    padding-left: 5px;
+}
+
+#chatarea {
+    /* border: 2px solid green; */
+    border-left: 3px solid black;
+    padding-left: 5px;
+
+    height: 700px;  /* Adjust this as needed for your chat area height */
+    display: flex;
+    flex-direction: column-reverse; /* New messages appear at the bottom */
+    overflow-y: auto; /* Enables vertical scrolling in the chat area */
+    padding: 10px;
+}
+
+#message-bar {
+    display: flex;
+    width: 95%;
+    border-left: 3px solid black;
+    padding-left: 5px;
+    align-items: center; /* Centers content vertically */
+}
+
+
+#message-input {
     resize: none;
-    border: solid 2px black;
+    /* border: solid 2px red; */
     height: 30px;
     width: 100%;
     align-content: center;
 }
-#message-send-button{
-    border: solid black 2px;
+
+#message-send-button {
+    border: solid midnightblue 2px;
     width: 60px;
     height: 34px;
     text-align: center;
     align-content: center;
 }
 
-
 .message {
     border: 1px solid #ddd;
     margin: 10px 0;
     padding: 10px;
     background-color: #f9f9f9;
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* Left-aligned messages */
+.left {
+    align-self: flex-start;
+    background-color: lightgray;
+}
+
+/* Right-aligned messages */
+.right {
+    align-self: flex-end;
+    background-color: lightblue;
 }
 
 .message-header {
@@ -72,6 +171,3 @@
     margin: 0;
 }
 
-.contact-list{
-    border: solid black 2px;
-}
