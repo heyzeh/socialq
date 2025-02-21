@@ -45,7 +45,7 @@ var footerHTML = `
           <a class="footerlink" href="">Twitter</a>
       </div>
       <div id="company">
-          <a id="social" class="footerlink" href="homev2.html">Orbit</a>
+          <a id="social" class="footerlink" href="../homev2.html">Orbit</a>
       </div>
   </div>
 `;
@@ -73,8 +73,9 @@ var headerHTML = `
     </p>
     <img id="profileIconSmall" src="../img/blank_profile.png" alt="Profile Icon">
     <div id="profile-header-tab">
-      <a id="profileprofile" href="../html/profilev2.html?userId=${uid}">Profile</a> <br>
-      <a id="header-profile-settings" href="../html/profile_settings.html?userId=${uid}">Profile Settings</a>
+      <div id="profileprofile"><a href="../html/profilev2.html?userId=${uid}">Profile</a></div> <br>
+      <div id="header-profile-inbox"><a href="../html/inbox.html">Inbox</a></div> <br>
+      <div id="header-profile-settings"><a href="../html/profile_settings.html?userId=${uid}">Profile Settings</a> </div>
     </div>
 </div>
 
